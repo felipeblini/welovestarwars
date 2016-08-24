@@ -30,10 +30,11 @@
             <img class="responsive-img" src="img/starwars.0.0.jpg" alt="">
 
             <div class="views-wrapper">
-                <div class="view view-home" id="view-home">
+                <div class="view view-home">
+                    <div id="scrollable">
                     <div class="list">
                         <div class="item">
-                            <a href="#" data-id="1" class="white-text">
+                            <a href="#" class="white-text">
                                 <img src="img/StarWarsMoviePoster1977-p.jpg" alt="">
                                 <span>A New Hope</span>
                                 <small>Filme estreiado em: 1977</small>
@@ -42,7 +43,7 @@
                         </div>
 
                         <div class="item">
-                            <a href="#"  onclick="mostraDetalhes(2)" class="white-text">
+                            <a href="#" class="white-text">
                                 <img src="img/Star_Wars_-_Episode_II_Attack_of_the_Clones_(movie_poster)-p.jpg" alt="">
                                 <span>A New Hope</span>
                                 <small>Filme estreiado em: 1977</small>
@@ -51,7 +52,16 @@
                         </div>
 
                         <div class="item">
-                            <a href="#" onclick="mostraDetalhes(3)" class="white-text">
+                            <a href="#" class="white-text">
+                                <img src="img/Star_Wars_Episode_III_Revenge_of_the_Sith_poster-p.jpg" alt="">
+                                <span>A New Hope</span>
+                                <small>Filme estreiado em: 1977</small>
+                                <small>Diretor: George Lucas</small>
+                            </a>
+                        </div>
+
+                        <div class="item">
+                            <a href="#" class="white-text">
                                 <img src="img/Star_Wars_Episode_III_Revenge_of_the_Sith_poster-p.jpg" alt="">
                                 <span>A New Hope</span>
                                 <small>Filme estreiado em: 1977</small>
@@ -59,16 +69,17 @@
                             </a>
                         </div>
                     </div>
+                    </div>
                 </div>
 
-                <div class="view view-detalhes" id="view-detalhes">
+                <div class="view view-detalhes">
                     <h5 class="white-text center-align">A New Hope</h5>
                     <div class="row">
                         <div class="col s12">
                             <ul class="tabs black">
                                 <li class="tab col s3 waves-effect"><a class="active" href="#personagens">Personagens</a></li>
-                                <li class="tab col s3"><a href="#planetas">Planetas</a></li>
-                                <li class="tab col s3"><a href="#naves">Naves</a></li>
+                                <li class="tab col s3 waves-effect"><a href="#planetas">Planetas</a></li>
+                                <li class="tab col s3 waves-effect"><a href="#naves">Naves</a></li>
                             </ul>
                         </div>
 
@@ -129,6 +140,71 @@
                                         <td>120</td>
                                         <td>77</td>
                                     </tr>
+                                    <tr>
+                                        <td>Alvin</td>
+                                        <td>120</td>
+                                        <td>77</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Alvin</td>
+                                        <td>120</td>
+                                        <td>77</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Alvin</td>
+                                        <td>120</td>
+                                        <td>77</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Alvin</td>
+                                        <td>120</td>
+                                        <td>77</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Alvin</td>
+                                        <td>120</td>
+                                        <td>77</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Alvin</td>
+                                        <td>120</td>
+                                        <td>77</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Alvin</td>
+                                        <td>120</td>
+                                        <td>77</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Alvin</td>
+                                        <td>120</td>
+                                        <td>77</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Alvin</td>
+                                        <td>120</td>
+                                        <td>77</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Alvin</td>
+                                        <td>120</td>
+                                        <td>77</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Alvin</td>
+                                        <td>120</td>
+                                        <td>77</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Alvin</td>
+                                        <td>120</td>
+                                        <td>77</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Alvin</td>
+                                        <td>120</td>
+                                        <td>77</td>
+                                    </tr>
                                 </tbody>
                             </table>
                         </div>
@@ -159,6 +235,21 @@
                                         <td>120</td>
                                         <td>77</td>
                                     </tr>
+                                    <tr>
+                                        <td>Alvin</td>
+                                        <td>120</td>
+                                        <td>77</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Alvin</td>
+                                        <td>120</td>
+                                        <td>77</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Alvin</td>
+                                        <td>120</td>
+                                        <td>77</td>
+                                    </tr>
                                 </tbody>
                             </table>
                         </div>
@@ -174,14 +265,19 @@
             $(document).ready(function() {
                 $(".item > a").click(function(e) {
                     e.preventDefault();
-                    $(".views-wrapper").css('transform', 'translateX(-50%)')
+                    $(".views-wrapper").css('transform', 'translateX(-100%)')
                     $(".btn-voltar").css('display', 'block');
+                    $(".view-detalhes").css('display', 'block');
+                    $(".views-wrapper").css('overflow-x', 'visible');
+                    $('ul.tabs').tabs('select_tab', 'personagens');
                 });
 
                 $(".btn-voltar").click(function(e) {
                     e.preventDefault();
                     $(".views-wrapper").css('transform', 'translateX(0)');
                     $(this).css('display', 'none');
+                    $(".view-detalhes").css('display', 'none');
+                    $(".views-wrapper").css('overflow-x', 'hidden');
                 });
             });
         </script>

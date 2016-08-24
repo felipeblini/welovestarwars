@@ -1,7 +1,7 @@
 body {
     background: #000;
-    overflow-x: hidden;
     width: 100%;
+    /*overflow-x: hidden*/
 }
 
 .btn-voltar {
@@ -11,25 +11,36 @@ body {
     transition: 300ms ease;
 }
 
+
 .views-wrapper {
     transform: translateX(0);
     -webkit-transition: 300ms ease;
     -moz-transition: 300ms ease;
     transition: 300ms ease;
-    width: 200%;    
+    
+    width: 100%;
+    overflow-x: hidden
 }
 
-.views-wrapper .view {
-    position: fixed;
-    width: 50%;
+.view {
+    /*position: fixed;*/
+    width: 100%;
 }
 
-.view-home {
-    left: 0;
-}
+/*div#scrollable {
+    background: #fff;
+    overflow-y: scroll;
+}*/
+
 
 .view-detalhes {
-    right: 0;
+    position: absolute;
+    right: -100%;
+    display: none;
+}
+
+.content img {
+    /*position: fixed;*/
 }
 
 .content .list .item {
@@ -37,6 +48,7 @@ body {
     background: #263238 url(../img/right.png) no-repeat 90% 50% ;
     padding: 10px;
     float: left;
+    min-height: 50px;
     width: 100%;
     border-top: solid 2px black;
 }
@@ -58,8 +70,3 @@ body {
 .margin-top {
     margin-top: 15px;
 }
-/*
-a, a:hover {
-    text-decoration: none;
-    color: #fff
-}*/
