@@ -27,20 +27,10 @@ body {
     width: 100%;
 }
 
-/*div#scrollable {
-    background: #fff;
-    overflow-y: scroll;
-}*/
-
-
 .view-detalhes {
     position: absolute;
     right: -100%;
     display: none;
-}
-
-.content img {
-    /*position: fixed;*/
 }
 
 .content .list .item {
