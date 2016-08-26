@@ -1,3 +1,5 @@
+'use strict';
+
 var dataFactory = {
     resource: 'http://swapi.co/api/',
 
@@ -24,41 +26,47 @@ var dataFactory = {
             '</tbody>',
 
     buscaFilmes: function (uiEl) {
-        let that = this;
+        console.log('buscando filmes...');
 
-        let uiLista = document.querySelector(uiEl);
+        var that = this;
 
-        $.get(this.resource + 'films/', function (resposta, status) {
-            console.log(status);
+        var uiLista = document.querySelector(uiEl);
 
-            uiLista.innerHTML = '';
+        $.ajax({
+            url: this.resource + 'films/',
+            success: function (resposta, status) {
+                console.log('status request buscando filmes: ' + status);
 
-            let filmes = resposta.results;
+                uiLista.innerHTML = '';
 
-            console.log(filmes);
+                var filmes = resposta.results;
 
-            filmes.forEach(function (item) {
-                if(!item.img) {
-                    that.identificaFotoFilme(item);
-                }
+                console.log('filmes: ' + filmes);
 
-                let title = item.title;
-            
-                let newHtml = '<div class="item">' +
-                    '<a data-id=' + item.episode_id + ' data-title=' + title.split(' ').join('+') + ' href="#" class="white-text">' +
-                    '<img src="img/' + item.img + '" alt="">' +
-                    '<span>' + title + '</span>' +
-                    '<small>Filme estreiado em: ' + item.release_date.split('-')[0] + '</small>' +
-                    '<small>Diretor: ' + item.director + '</small>' +
-                    '</a>' +
-                '</div>';
+                filmes.forEach(function (item) {
+                    if(!item.img) {
+                        that.identificaFotoFilme(item);
+                    }
 
-                uiLista.innerHTML += newHtml;
-            }, this);
+                    var title = item.title;
+                
+                    var newHtml = '<div class="item">' +
+                        '<a data-id=' + item.episode_id + ' data-title=' + title.split(' ').join('+') + ' href="#" class="white-text">' +
+                        '<img src="img/' + item.img + '" alt="">' +
+                        '<span>' + title + '</span>' +
+                        '<small>Filme estreiado em: ' + item.release_date.split('-')[0] + '</small>' +
+                        '<small>Diretor: ' + item.director + '</small>' +
+                        '</a>' +
+                    '</div>';
 
-            Materialize.toast(resposta.count + ' filmes encontrados', 3500);
+                    uiLista.innerHTML += newHtml;
+                }, this);
 
-            window.bindClickOnItem();
+                Materialize.toast(resposta.count + ' filmes encontrados', 3500);
+
+                window.bindClickOnItem();
+            },
+            fail: function(e) { console.log('fail: ' + e); }
         });
     },
 
@@ -93,7 +101,7 @@ var dataFactory = {
 
     buscaPersonagens: function(idFilme, uiEl) {
         console.log('buscando personagens...');
-        let uiLista = $(uiEl);
+        var uiLista = $(uiEl);
         
         if(!uiLista.data('loaded')) {        
             uiLista.html(this.spinner);
@@ -101,15 +109,15 @@ var dataFactory = {
             $.ajax({
                 url: this.resource + "films/" + idFilme + "/",
                 success: function(resultado) {
-                    let personagens = resultado.characters;
-                    let length = personagens.length;
-                    let itensArray = []; 
-                    let i = 0;
+                    var personagens = resultado.characters;
+                    var length = personagens.length;
+                    var itensArray = []; 
+                    var i = 0;
 
                     personagens.forEach(function(item) {
                         $.get(item, function(resultado) {
 
-                            let newItem = '<tr>' +
+                            var newItem = '<tr>' +
                                                 '<td>' + resultado.name + '</td>' +
                                                 '<td>' + resultado.height + '</td>' +
                                                 '<td>' + resultado.mass + '</td>' +
@@ -120,7 +128,7 @@ var dataFactory = {
                             i++;
 
                             if(i == length) {
-                                let tHead = '<thead>' +
+                                var tHead = '<thead>' +
                                     '<tr>' +
                                         '<th>Nome</th>' +
                                         '<th>Peso</th>' +
@@ -144,7 +152,9 @@ var dataFactory = {
     },
 
     buscaPlanetas: function(idFilme, uiEl) {
-        let uiLista = $(uiEl);
+        console.log('buscando planetas...');
+
+        var uiLista = $(uiEl);
         
         if(!uiLista.data('loaded')) {        
             uiLista.html(this.spinner);
@@ -152,15 +162,15 @@ var dataFactory = {
             $.ajax({
                 url: this.resource + "films/" + idFilme + "/",
                 success: function(resultado) {
-                    let planetas = resultado.planets;
-                    let length = planetas.length;
-                    let itensArray = []; 
-                    let i = 0;
+                    var planetas = resultado.planets;
+                    var length = planetas.length;
+                    var itensArray = []; 
+                    var i = 0;
 
                     planetas.forEach(function(item) {
                         $.get(item, function(resultado) {
 
-                            let newItem = '<tr>' +
+                            var newItem = '<tr>' +
                                                 '<td>' + resultado.name + '</td>' +
                                                 '<td>' + resultado.diameter + '</td>' +
                                                 '<td>' + resultado.population  + '</td>' +
@@ -171,7 +181,7 @@ var dataFactory = {
                             i++;
 
                             if(i == length) {
-                                let tHead = '<thead>' +
+                                var tHead = '<thead>' +
                                     '<tr>' +
                                         '<th>Nome</th>' +
                                         '<th>Diâmetro</th>' +
@@ -195,7 +205,9 @@ var dataFactory = {
     },
 
     buscaNaves: function(idFilme, uiEl) {
-        let uiLista = $(uiEl);
+        console.log('buscando naves...');
+
+        var uiLista = $(uiEl);
 
         if(!uiLista.data('loaded')) {        
             uiLista.html(this.spinner);
@@ -203,15 +215,15 @@ var dataFactory = {
             $.ajax({
                 url: this.resource + "films/" + idFilme + "/",
                 success: function(resultado) {
-                    let naves = resultado.starships;
-                    let length = naves.length;
-                    let itensArray = []; 
-                    let i = 0;
+                    var naves = resultado.starships;
+                    var length = naves.length;
+                    var itensArray = []; 
+                    var i = 0;
 
                     naves.forEach(function(item) {
                         $.get(item, function(resultado) {
 
-                            let newItem = '<tr>' +
+                            var newItem = '<tr>' +
                                                 '<td>' + resultado.name + '</td>' +
                                                 '<td>' + resultado.model + '</td>' +
                                                 '<td>' + resultado.passengers + '</td>' +
@@ -222,7 +234,7 @@ var dataFactory = {
                             i++;
 
                             if(i == length) {
-                                let tHead = '<thead>' +
+                                var tHead = '<thead>' +
                                     '<tr>' +
                                         '<th>Nome</th>' +
                                         '<th>Modelo</th>' +
