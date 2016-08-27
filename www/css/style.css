@@ -1,5 +1,4 @@
 body {
-    background: #000;
     width: 100%;
     /*overflow-x: hidden*/
 }
@@ -19,7 +18,9 @@ body {
     transition: 300ms ease;
     
     width: 100%;
-    overflow-x: hidden
+    overflow-x: hidden;
+
+    margin-top: -9px; 
 }
 
 .view {
@@ -30,6 +31,7 @@ body {
 .view-detalhes {
     position: absolute;
     right: -100%;
+    display: none;
 }
 
 .content .list .item {
@@ -63,4 +65,23 @@ body {
 .preloader-wrapper-custom {
     width: 75px;
     margin: 30px auto;
+}
+
+h5 {
+    background: #000;
+    margin-top: -10px;
+    padding: 5px;
+}
+
+.linha-tabs {
+    margin-top: -9px;
+     background: #000;
+}
+
+.black-background {
+    background: #000;
+}
+
+.img-hero img {
+    width: 100%;
 }

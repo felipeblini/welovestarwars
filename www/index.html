@@ -18,7 +18,7 @@
             <nav class="black">
                 <div class="nav-wrapper valign-wrapper">
                     <a href="#" class="btn-voltar">
-                        <i class="material-icons waves-effect waves-circle btn-voltar">fast_rewind</i>
+                        <i class="material-icons waves-effect waves-circle btn-voltar">done</i>
                     </a>
                     <a href="#" class="brand-logo center">We Love</a>
                 </div>
@@ -26,13 +26,14 @@
         </div>
 
         <div class="content">
-            <img class="responsive-img" src="img/starwars.0.0.jpg" alt="">
-
+            <div class="black-background img-hero">
+                <img src="img/starwars.0.0.jpg" alt="">
+            </div>
             <div class="views-wrapper">
                 <div class="view view-home">
                     <div id="listaDeFilmes" class="list">
                         <!-- spinner -->
-                        <div class="row">
+                        <div>
                             <div class="preloader-wrapper-custom">
                                 <div class="preloader-wrapper active">
                                     <div class="spinner-layer spinner-red-only">
@@ -55,7 +56,7 @@
                     <div class="view view-detalhes">
                         <h5 class="white-text center-align">A New Hope</h5>
                         <div class="row">
-                            <div class="col s12">
+                            <div class="col s12 linha-tabs">
                                 <ul class="tabs black">
                                     <li class="tab col s3 waves-effect"><a id="aba-personagens" href="#personagens">Personagens</a></li>
                                     <li class="tab col s3 waves-effect"><a id="aba-planetas" href="#planetas">Planetas</a></li>
@@ -64,19 +65,19 @@
                             </div>
 
                             <!--  Personagens -->
-                            <div id="personagens" class="col s12 white-text margin-top">
+                            <div id="personagens" class="col s12 black-text margin-top">
                                 <table id="listaDePersonagens" class="bordered responsible-table table-lista">
                                     <!-- aqui entra o spinner ou o conteúdo (arquivo data-factory.js) -->
                                 </table>
                             </div>
 
-                            <div id="planetas" class="col s12 white-text margin-top">
+                            <div id="planetas" class="col s12 black-text margin-top">
                                 <table id="listaDePlanetas" class="bordered responsible-table table-lista">
                                     <!-- aqui entra um spinner ou o conteúdo (arquivo data-factory.js) -->
                                 </table>
                             </div>
 
-                            <div id="naves" class="col s12 white-text margin-top">
+                            <div id="naves" class="col s12 black-text margin-top">
                                 <table id="listaDeNaves" class="bordered responsible-table table-lista">
                                     <!-- aqui entra um spinner ou o conteúdo (arquivo data-factory.js) -->
                                 </table>
