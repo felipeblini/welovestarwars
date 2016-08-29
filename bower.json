@@ -1,0 +1,21 @@
+{
+  "name": "weloveswapp-project",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Felipe blini <Felipe.blini@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/felipeblini/welovestarwars",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "materialize": "^0.97.7",
+    "angular": "^1.5.8"
+  }
+}
