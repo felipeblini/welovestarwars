@@ -2,38 +2,48 @@
 <html lang="en">
 
     <head>
+
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset="UTF-8">
         <title>We Love Star Wars</title>
 
-        <!-- icons material design -->
-        <!-- https://github.com/google/material-design-icons/tree/master/iconfont -->
-        <link rel="stylesheet" href="vendors/material-icons/material-icons.css">
+        <!-- css materialize -->
         <link rel="stylesheet" href="vendors/materialize/css/materialize.min.css">
+
+        <!-- icones do materialize -->
+        <link rel="stylesheet" href="vendors/material-icons/material-icons.css">
+
+        <!-- css customizado -->
         <link rel="stylesheet" href="css/style.css">
     </head>
 
     <body>
+        <!-- navbar -->
         <div class="navbar-fixed">
             <nav class="black">
                 <div class="nav-wrapper valign-wrapper">
-                    <a href="#" class="btn-voltar">
+                    <a href="#" id="btnVoltar" class="hide">
                         <i class="material-icons waves-effect waves-circle btn-voltar">done</i>
                     </a>
                     <a href="#" class="brand-logo center">We Love</a>
                 </div>
             </nav>
         </div>
+        <!-- ./navbar -->
 
+        <!-- conteudo-container -->
         <div class="content">
-            <div class="black-background img-hero">
-                <img src="img/starwars.0.0.jpg" alt="">
+            <div class="fundo-preto img-hero">
+                <img class="responsive-img" src="img/starwars.0.0.jpg" alt="">
             </div>
-            <div class="views-wrapper">
+
+            <!-- views-container -->
+            <div class="views-container">
+                <!-- view-home -->
                 <div class="view view-home">
-                    <div id="listaDeFilmes" class="list">
+                    <ul id="listaDeFilmes" class="collection">
                         <!-- spinner -->
-                        <div>
+                        <li>
                             <div class="preloader-wrapper-custom">
                                 <div class="preloader-wrapper active">
                                     <div class="spinner-layer spinner-red-only">
@@ -49,123 +59,68 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </li>
                         <!-- ./spinner -->
-                    </div>
+                    </ul>
                 </div>
+                <!-- ./view-home -->
 
+                <!-- view-detalhes -->
                 <div class="view view-detalhes">
-                    <h5 class="white-text center-align">A New Hope</h5>
                     <div class="row">
-                        <div class="col s12 linha-tabs">
+                        <!-- abas -->
+                        <div class="col s12 row-tabs">
                             <ul class="tabs black">
                                 <li class="tab col s3 waves-effect"><a id="aba-personagens" href="#personagens">Personagens</a></li>
                                 <li class="tab col s3 waves-effect"><a id="aba-planetas" href="#planetas">Planetas</a></li>
                                 <li class="tab col s3 waves-effect"><a id="aba-naves" href="#naves">Naves</a></li>
                             </ul>
                         </div>
+                        <!-- ./abas -->
 
-                        <!-- Personagens -->
-                        <div id="personagens" class="col s12 black-text margin-top">
-                            <table id="listaDePersonagens" class="bordered responsible-table table-lista">
+                        <!-- personagens -->
+                        <div id="personagens" class="col s12">
+                            <table id="listaDePersonagens" class="bordered responsible-table table-dados">
                                 <!-- aqui entra o spinner ou o conteúdo (arquivo data-factory.js) -->
                             </table>
                         </div>
+                        <!-- ./personagens -->
 
-                        <div id="planetas" class="col s12 black-text margin-top">
-                            <table id="listaDePlanetas" class="bordered responsible-table table-lista">
+                        <!-- planetas -->
+                        <div id="planetas" class="col s12">
+                            <table id="listaDePlanetas" class="bordered responsible-table table-dados">
                                 <!-- aqui entra um spinner ou o conteúdo (arquivo data-factory.js) -->
                             </table>
                         </div>
+                        <!-- ./planetas -->
 
-                        <div id="naves" class="col s12 black-text margin-top">
-                            <table id="listaDeNaves" class="bordered responsible-table table-lista">
+                        <!-- naves -->
+                        <div id="naves" class="col s12">
+                            <table id="listaDeNaves" class="bordered responsible-table table-dados">
                                 <!-- aqui entra um spinner ou o conteúdo (arquivo data-factory.js) -->
                             </table>
                         </div>
+                        <!-- ./naves -->
                     </div>
                 </div>
+                <!-- ./view-detalhes -->
             </div>
+            <!-- ./views-container -->
         </div>
+        <!-- ./conteudo-container -->
 
-        <script type="text/javascript" src="cordova.js"></script>
-
+        <!-- js materialize e jquery -->
         <script src="vendors/jquery/jquery-3.1.0.min.js"></script>
         <script src="vendors/materialize/js/materialize.min.js"></script>
-        
-        <script type="text/javascript" src="js/index.js"></script>
+
+        <!-- js customizado -->
+        <script src="js/home.js"></script>
+        <script src="js/detalhes.js"></script>
+
+        <script src="js/index.js"></script>
         <script src="js/data-factory.js"></script>
 
-        <script type="text/javascript">
-            app.initialize();
-
-            // ao clicar em um item da lista
-            function bindClickOnItem() {
-                console.log('entrou em bindClickOnItem()');
-
-                $(".item > a").click(function(e) {
-                    e.preventDefault();
-
-                    // insere o titulo do filme na tag h5
-                    var title = $(this).data('title').replace(/\+/g, ' ');
-                    $(".view-detalhes h5").html(title);
-
-                    // desloca a view wrapper pra a esquerda em 100% do tamanho da tela
-                    $(".views-wrapper").css('transform', 'translateX(-100%)');
-
-                    // mostra o botao voltar na navbar
-                    $(".btn-voltar").css('display', 'block');
-
-                    // deixa a view detalhes visivel
-                    $(".view-detalhes").css('display', 'block');
-                    
-                    // torna visivel o conteudo que esta fora (overflow) da view wrapper 
-                    $(".views-wrapper").css('overflow-x', 'visible');
-
-                    // carrega dados das tabs
-                    var idFilme = $(this).data('id');
-                    dataFactory.buscaPersonagens(idFilme, '#listaDePersonagens');
-                    dataFactory.buscaPlanetas(idFilme, '#listaDePlanetas');
-                    dataFactory.buscaNaves(idFilme, '#listaDeNaves');
-
-                    $("#aba-personagens").click(function(e) {
-                        e.preventDefault();
-
-                        dataFactory.buscaPersonagens(idFilme, '#listaDePersonagens');
-                    });
-
-                    $("#aba-planetas").click(function(e) {
-                        e.preventDefault();
-
-                        dataFactory.buscaPlanetas(idFilme, '#listaDePlanetas');
-                    });
-
-                    $("#aba-naves").click(function(e) {
-                        e.preventDefault();
-
-                        dataFactory.buscaNaves(idFilme, '#listaDeNaves');
-                    });
-                });
-            }
-
-            $(".btn-voltar").click(function(e) {
-                e.preventDefault();
-
-                // desloca a view wrapper de volta para a posicao original
-                $(".views-wrapper").css('transform', 'translateX(0)');
-
-                // esconde o botao voltar na navbar
-                $(this).css('display', 'none');
-
-                // esconde a view detalhes
-                $(".view-detalhes").css('display', 'none');
-
-                // torna ivisivel o conteudo que esta fora (overflow) da view wrapper 
-                $(".views-wrapper").css('overflow-x', 'hidden');
-
-                // zera flag informando que as listas de dados do filme foram carregados
-                $(".table-lista").data("loaded", false);
-            });
-        </script>
+        <!-- 404 em ambiente de desenvolvimento -->
+        <script src="cordova.js"></script>
     </body>
 </html>

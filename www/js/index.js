@@ -3,6 +3,7 @@
 var app = {
     // Application Constructor
     initialize: function() {
+        console.log('inicializando app');
         this.bindEvents();
     },
     // Bind Event Listeners
@@ -10,6 +11,7 @@ var app = {
     // Bind any events that are required on startup. Common events are:
     // 'load', 'deviceready', 'offline', and 'online'.
     bindEvents: function() {
+        console.log('adicionando manipulador do evento deviceready');
         document.addEventListener('deviceready', this.onDeviceReady, false);
     },
     // deviceready Event Handler
@@ -17,18 +19,20 @@ var app = {
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
+        console.log('recebendo e repassando evento deviceready');
         app.receivedEvent('deviceready');
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
         console.log('Received Event: ' + id);
-
         this.buscaFilmes();
-
     },
 
     buscaFilmes: function () {
+        console.log('Solicitando lista de filmes ao data factory');
         dataFactory.buscaFilmes('#listaDeFilmes');
     }
 };
+
+app.initialize();
 

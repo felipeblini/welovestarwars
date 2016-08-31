@@ -50,14 +50,17 @@ var dataFactory = {
 
                     var title = item.title;
                 
-                    var newHtml = '<div class="item">' +
-                        '<a data-id=' + item.episode_id + ' data-title=' + title.split(' ').join('+') + ' href="#" class="white-text">' +
-                        '<img src="img/' + item.img + '" alt="">' +
-                        '<span>' + title + '</span>' +
-                        '<small>Filme estreiado em: ' + item.release_date.split('-')[0] + '</small>' +
-                        '<small>Diretor: ' + item.director + '</small>' +
+                    var newHtml = '<li class="collection-item avatar">' +
+                        '<a data-id=' + item.episode_id + ' data-title=' + title.split(' ').join('+') + ' href="#">' +
+                            '<img src="img/' + item.img + '" alt="" class="circle">' +
+                            '<span>' + title + '</span>' +
+                            '<p>' +
+                                '<small>Filme estreiado em: ' + item.release_date.split('-')[0] + '</small><br>' +
+                                '<small>Diretor: ' + item.director + '</small>' +
+                            '</p>' +
+                            '<i class="material-icons secondary-content">&#xE8E4;</i>' +
                         '</a>' +
-                    '</div>';
+                    '</li>';
 
                     uiLista.innerHTML += newHtml;
                 }, this);
