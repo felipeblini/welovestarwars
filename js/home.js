@@ -1,11 +1,16 @@
+// prepara a view Detalhes ativando a primeira tab
+function preparaViewDetalhes(ativarTabId) {
+   $("ul.tabs > li:nth-child(1) > a").css('color', '#F8C0C4');
+    $('ul.tabs').tabs('select_tab', ativarTabId);
+}
+
 $(document).ready(function() {
 
     $(".view-detalhes").addClass('hide');
 
     $("#btnVoltar").addClass('hide');
 
-    // ativa a tab Personagens
-    $("ul.tabs > li:nth-child(1) > a").css('color', '#F8C0C4');
+    preparaViewDetalhes('personagens');
 
     // ao clicar em um item da lista
     $("li.collection-item > a").click(function(e) {
@@ -19,6 +24,8 @@ $(document).ready(function() {
 
         // deixa a view detalhes visivel
         $(".view-detalhes").removeClass('hide');
+
+        preparaViewDetalhes('personagens');
     });
 
     // desativa a tab Personagens quando clicada nas outras tabs
