@@ -1,7 +1,8 @@
 $(document).ready(function() {
 
     $(".view-detalhes").addClass('hide');
-    $(".btn-voltar").addClass('hide');
+
+    $("#btnVoltar").addClass('hide');
 
     // ativa a tab Personagens
     $("ul.tabs > li:nth-child(1) > a").css('color', '#F8C0C4');
@@ -14,7 +15,7 @@ $(document).ready(function() {
         $(".views-container").css('transform', 'translateX(-100%)');
 
         // mostra o botao voltar na navbar
-        $(".btn-voltar").removeClass('hide');
+        $("#btnVoltar").removeClass('hide');
 
         // deixa a view detalhes visivel
         $(".view-detalhes").removeClass('hide');

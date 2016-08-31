@@ -2,9 +2,9 @@
 <html lang="en">
 
     <head>
-        <meta charset="UTF-8">
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
         <title>We Love Star Wars</title>
 
         <!-- css materialize -->
@@ -18,28 +18,28 @@
     </head>
 
     <body>
-        <!-- nav bar -->
+        <!-- navbar -->
         <div class="navbar-fixed">
             <nav class="black">
                 <div class="nav-wrapper valign-wrapper">
-                    <a href="#" class="btn-voltar">
+                    <a href="#" id="btnVoltar" class="hide">
                         <i class="material-icons waves-effect waves-circle btn-voltar">done</i>
                     </a>
                     <a href="#" class="brand-logo center">We Love</a>
                 </div>
             </nav>
         </div>
-        <!-- ./navbar
+        <!-- ./navbar -->
 
-    <!-- conteudo -->
+        <!-- conteudo-container -->
         <div class="content">
             <div class="fundo-preto img-hero">
                 <img class="responsive-img" src="img/starwars.0.0.jpg" alt="">
             </div>
-            <!-- view container -->
-            <div class="views-container">
 
-                <!-- view home -->
+            <!-- views-container -->
+            <div class="views-container">
+                <!-- view-home -->
                 <div class="view view-home">
                     <ul class="collection">
                         <li class="collection-item avatar">
@@ -104,15 +104,15 @@
 
                     </ul>
                 </div>
-                <!-- ./view home -->
+                <!-- ./view-home -->
 
-                <!-- view detalhes -->
+                <!-- view-detalhes -->
                 <div class="view view-detalhes">
                     <div class="row">
                         <!-- abas -->
                         <div class="col s12 row-tabs">
                             <ul class="tabs black">
-                                <li class="tab col s3 waves-effect" id="personagens-tab"><a id="personagens-link" href="#personagens">Personagens</a></li>
+                                <li class="tab col s3 waves-effect"><a href="#personagens">Personagens</a></li>
                                 <li class="tab col s3 waves-effect"><a href="#planetas">Planetas</a></li>
                                 <li class="tab col s3 waves-effect"><a href="#naves">Naves</a></li>
                             </ul>
@@ -124,9 +124,9 @@
                             <table class="bordered responsible-table">
                                 <thead>
                                     <tr>
-                                        <th data-field="id">Nome</th>
-                                        <th data-field="name">Peso</th>
-                                        <th data-field="price">Massa</th>
+                                        <th>Nome</th>
+                                        <th>Peso</th>
+                                        <th>Massa</th>
                                     </tr>
                                 </thead>
 
@@ -149,16 +149,16 @@
                                 </tbody>
                             </table>
                         </div>
-                        <!-- /.personagens -->
+                        <!-- ./personagens -->
 
                         <!-- planetas -->
                         <div id="planetas" class="col s12">
                             <table class="bordered responsible-table">
                                 <thead>
                                     <tr>
-                                        <th data-field="id">Nome</th>
-                                        <th data-field="name">Diâmetro</th>
-                                        <th data-field="price">População</th>
+                                        <th>Nome</th>
+                                        <th>Diâmetro</th>
+                                        <th>População</th>
                                     </tr>
                                 </thead>
 
@@ -246,16 +246,16 @@
                                 </tbody>
                             </table>
                         </div>
-                        <!-- /.planetas -->
+                        <!-- ./planetas -->
 
                         <!-- naves -->
                         <div id="naves" class="col s12">
                             <table class="bordered responsible-table">
                                 <thead>
                                     <tr>
-                                        <th data-field="id">Nome</th>
-                                        <th data-field="name">Modelo</th>
-                                        <th data-field="price">Passageiros</th>
+                                        <th>Nome</th>
+                                        <th>Modelo</th>
+                                        <th>Passageiros</th>
                                     </tr>
                                 </thead>
 
@@ -293,15 +293,14 @@
                                 </tbody>
                             </table>
                         </div>
-                        <!-- /.naves -->
+                        <!-- ./naves -->
                     </div>
-
                 </div>
-                <!-- ./view detalhes -->
+                <!-- ./view-detalhes -->
             </div>
-            <!-- ./view container -->
+            <!-- ./views-container -->
         </div>
-        <!-- ./conteudo -->
+        <!-- ./conteudo-container -->
 
         <!-- js materialize e jquery -->
         <script src="vendors/jquery/jquery-3.1.0.min.js"></script>

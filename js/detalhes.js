@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
     // ao clicar no botao voltar
-    $(".btn-voltar").click(function(e) {
+    $("#btnVoltar").click(function(e) {
         e.preventDefault();
         
         // desloca a view wrapper de volta para a posicao original
