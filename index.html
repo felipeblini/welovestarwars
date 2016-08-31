@@ -3,9 +3,9 @@
 
     <head>
         <meta charset="UTF-8">
-        <title>We Love Star Wars</title>
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>We Love Star Wars</title>
 
         <!-- css materialize -->
         <link rel="stylesheet" href="vendors/materialize/css/materialize.min.css">
@@ -13,12 +13,12 @@
         <!-- icones do materialize -->
         <link rel="stylesheet" href="vendors/material-icons/material-icons.css">
 
-        <!-- css -->
+        <!-- css customizado -->
         <link rel="stylesheet" href="css/style.css">
     </head>
 
     <body>
-        <!-- navbar -->
+        <!-- nav bar -->
         <div class="navbar-fixed">
             <nav class="black">
                 <div class="nav-wrapper valign-wrapper">
@@ -29,70 +29,98 @@
                 </div>
             </nav>
         </div>
-        <!-- ./navbar -->
+        <!-- ./navbar
 
-        <!-- conteudo -->
+    <!-- conteudo -->
         <div class="content">
             <div class="fundo-preto img-hero">
                 <img class="responsive-img" src="img/starwars.0.0.jpg" alt="">
             </div>
+            <!-- view container -->
+            <div class="views-container">
 
-            <!-- views -->
-            <div class="views-wrapper">
+                <!-- view home -->
                 <div class="view view-home">
-                    <div class="list">
-                        <div class="item">
-                            <a href="#" class="white-text">
-                                <img src="img/StarWarsMoviePoster1977-p.jpg" alt="">
-                                <span>A New Hope</span>
-                                <small>Filme estreiado em: 1977</small>
-                                <small>Diretor: George Lucas</small>
+                    <ul class="collection">
+                        <li class="collection-item avatar">
+                            <a href="#">
+                                <img src="img/filme-4-p.jpg" alt="" class="circle">
+                                <span class="title">A New Hope</span>
+                                <p>
+                                    <small>Filme estreiado em: 1977</small><br>
+                                    <small>Diretor: George Lucas</small>
+                                </p>
+                                <i class="material-icons secondary-content">trending_flat</i>
                             </a>
-                        </div>
+                        </li>
 
-                        <div class="item">
-                            <a href="#" class="white-text">
-                                <img src="img/Star_Wars_-_Episode_II_Attack_of_the_Clones_(movie_poster)-p.jpg" alt="">
-                                <span>A New Hope</span>
-                                <small>Filme estreiado em: 1977</small>
-                                <small>Diretor: George Lucas</small>
+                        <li class="collection-item avatar">
+                            <a href="#">
+                                <img src="img/filme-3-p.jpg" alt="" class="circle">
+                                <span class="title">A New Hope</span>
+                                <p>
+                                    <small>Filme estreiado em: 1977</small><br>
+                                    <small>Diretor: George Lucas</small>
+                                </p>
+                                <i class="material-icons secondary-content">trending_flat</i>
                             </a>
-                        </div>
+                        </li>
 
-                        <div class="item">
-                            <a href="#" class="white-text">
-                                <img src="img/Star_Wars_Episode_III_Revenge_of_the_Sith_poster-p.jpg" alt="">
-                                <span>A New Hope</span>
-                                <small>Filme estreiado em: 1977</small>
-                                <small>Diretor: George Lucas</small>
+                        <li class="collection-item avatar">
+                            <a href="#">
+                                <img src="img/filme-2-p.jpg" alt="" class="circle">
+                                <span class="title">A New Hope</span>
+                                <p>
+                                    <small>Filme estreiado em: 1977</small><br>
+                                    <small>Diretor: George Lucas</small>
+                                </p>
+                                <i class="material-icons secondary-content">trending_flat</i>
                             </a>
-                        </div>
+                        </li>
 
-                        <div class="item">
-                            <a href="#" class="white-text">
-                                <img src="img/Star_Wars_Episode_III_Revenge_of_the_Sith_poster-p.jpg" alt="">
-                                <span>A New Hope</span>
-                                <small>Filme estreiado em: 1977</small>
-                                <small>Diretor: George Lucas</small>
+                        <li class="collection-item avatar">
+                            <a href="#">
+                                <img src="img/filme-1-p.jpg" alt="" class="circle">
+                                <span class="title">A New Hope</span>
+                                <p>
+                                    <small>Filme estreiado em: 1977</small><br>
+                                    <small>Diretor: George Lucas</small>
+                                </p>
+                                <i class="material-icons secondary-content">trending_flat</i>
                             </a>
-                        </div>
-                    </div>
+                        </li>
+
+                        <li class="collection-item avatar">
+                            <a href="#">
+                                <img src="img/filme-3-p.jpg" alt="" class="circle">
+                                <span class="title">A New Hope</span>
+                                <p>
+                                    <small>Filme estreiado em: 1977</small><br>
+                                    <small>Diretor: George Lucas</small>
+                                </p>
+                                <i class="material-icons secondary-content">trending_flat</i>
+                            </a>
+                        </li>
+
+                    </ul>
                 </div>
+                <!-- ./view home -->
 
+                <!-- view detalhes -->
                 <div class="view view-detalhes">
-                    <h5 class="white-text center-align">Title</h5>
-
                     <div class="row">
-                        <div class="col s12 linha-tabs">
+                        <!-- abas -->
+                        <div class="col s12 row-tabs">
                             <ul class="tabs black">
-                                <li class="tab col s3 waves-effect"><a class="active" href="#personagens">Personagens</a></li>
+                                <li class="tab col s3 waves-effect" id="personagens-tab"><a id="personagens-link" href="#personagens">Personagens</a></li>
                                 <li class="tab col s3 waves-effect"><a href="#planetas">Planetas</a></li>
                                 <li class="tab col s3 waves-effect"><a href="#naves">Naves</a></li>
                             </ul>
                         </div>
+                        <!-- ./abas -->
 
-                        <!--  Personagens -->
-                        <div id="personagens" class="col s12 margin-top">
+                        <!-- personagens -->
+                        <div id="personagens" class="col s12">
                             <table class="bordered responsible-table">
                                 <thead>
                                     <tr>
@@ -121,9 +149,10 @@
                                 </tbody>
                             </table>
                         </div>
+                        <!-- /.personagens -->
 
                         <!-- planetas -->
-                        <div id="planetas" class="col s12 margin-top">
+                        <div id="planetas" class="col s12">
                             <table class="bordered responsible-table">
                                 <thead>
                                     <tr>
@@ -217,9 +246,10 @@
                                 </tbody>
                             </table>
                         </div>
+                        <!-- /.planetas -->
 
                         <!-- naves -->
-                        <div id="naves" class="col s12 margin-top">
+                        <div id="naves" class="col s12">
                             <table class="bordered responsible-table">
                                 <thead>
                                     <tr>
@@ -263,20 +293,23 @@
                                 </tbody>
                             </table>
                         </div>
+                        <!-- /.naves -->
                     </div>
-                </div>
-            </div>
-            <!-- ./views -->
 
+                </div>
+                <!-- ./view detalhes -->
+            </div>
+            <!-- ./view container -->
         </div>
         <!-- ./conteudo -->
 
-        <!-- js materialize e do jquery -->
+        <!-- js materialize e jquery -->
         <script src="vendors/jquery/jquery-3.1.0.min.js"></script>
         <script src="vendors/materialize/js/materialize.min.js"></script>
 
-        <!-- js -->
-        <script src="js/scripts.js"></script>
+        <!-- js customizado -->
+        <script src="js/home.js"></script>
+        <script src="js/detalhes.js"></script>
     </body>
 
 </html>
