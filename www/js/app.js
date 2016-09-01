@@ -7,4 +7,5 @@ var app = {
     }
 };
 
+// chama a metodo initialize do objeto app
 app.initialize();
