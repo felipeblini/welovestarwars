@@ -27,12 +27,14 @@ var app = {
         console.log('Received Event: ' + id);
         this.buscaFilmes();
     },
-
+    // buscar a lista de filmes com um request na api
+    // feito no objeto data factory
     buscaFilmes: function () {
         console.log('Solicitando lista de filmes ao data factory');
         dataFactory.buscaFilmes('#listaDeFilmes');
     }
 };
 
+// chama a metodo initialize do objeto app
 app.initialize();
 
