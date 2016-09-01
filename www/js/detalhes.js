@@ -13,10 +13,10 @@ $(document).ready(function() {
         // esconde a view detalhes
         $(".view-detalhes").addClass('hide');
 
-        // v2: zera flag loaded
+        // v1: zera flag loaded
         $(".table-dados").data("loaded", false);
 
-        // v2: zera titulo navbar
+        // v1: zera titulo navbar
         $(".brand-logo").html('We Love');
     });
 });

@@ -6,6 +6,7 @@ var app = {
         console.log('inicializando app');
         this.bindEvents();
     },
+
     // Bind Event Listeners
     //
     // Bind any events that are required on startup. Common events are:
@@ -14,15 +15,16 @@ var app = {
         console.log('adicionando manipulador do evento deviceready');
         document.addEventListener('deviceready', this.onDeviceReady, false);
     },
+
     // deviceready Event Handler
     //
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
-        console.log('recebendo e repassando evento deviceready');
+        console.log('device está pronto');
         app.receivedEvent('deviceready');
     },
-    // Update DOM on a Received Event
+    // Busca filmes quando o device esta pronto e o white list foi carregado
     receivedEvent: function(id) {
         console.log('Received Event: ' + id);
         this.buscaFilmes();
@@ -37,4 +39,3 @@ var app = {
 
 // chama a metodo initialize do objeto app
 app.initialize();
-

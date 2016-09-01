@@ -3,10 +3,10 @@
 var dataFactory = {
     resource: 'http://swapi.co/api/',
 
-    spinner: '<tbody>' +
+    preloader: '<tbody>' +
                 '<tr>' +
                     '<td>' +
-                        '<div class="preloader-wrapper-custom">' +
+                        '<div style="width: 75px; margin: 30px auto;">' +
                             '<div class="preloader-wrapper active">' +
                                 '<div class="spinner-layer spinner-red-only">' +
                                     '<div class="circle-clipper left">' +
@@ -67,9 +67,13 @@ var dataFactory = {
 
                 Materialize.toast(resposta.count + ' filmes encontrados', 3500);
 
-                window.bindClickOnItem();
+                // function  criada na home.js
+                window.addClickFilme();
             },
-            fail: function(e) { console.log('fail: ' + e); }
+            fail: function(e) {
+                console.log('fail: ' + e);
+                Materialize.toast('Erro, tente novamente', 3500);
+            }
         });
     },
 
@@ -107,7 +111,7 @@ var dataFactory = {
         var uiLista = $(uiEl);
         
         if(!uiLista.data('loaded')) {        
-            uiLista.html(this.spinner);
+            uiLista.html(this.preloader);
 
             $.ajax({
                 url: this.resource + "films/" + idFilme + "/",
@@ -160,7 +164,7 @@ var dataFactory = {
         var uiLista = $(uiEl);
         
         if(!uiLista.data('loaded')) {        
-            uiLista.html(this.spinner);
+            uiLista.html(this.preloader);
         
             $.ajax({
                 url: this.resource + "films/" + idFilme + "/",
@@ -213,7 +217,7 @@ var dataFactory = {
         var uiLista = $(uiEl);
 
         if(!uiLista.data('loaded')) {        
-            uiLista.html(this.spinner);
+            uiLista.html(this.preloader);
 
             $.ajax({
                 url: this.resource + "films/" + idFilme + "/",

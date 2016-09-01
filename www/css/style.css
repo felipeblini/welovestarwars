@@ -28,6 +28,7 @@ h5 {
 .row-tabs {
     margin-top: -9px;
     background: #000;
+    position: fixed;
 }
 
 .fundo-preto {
@@ -36,10 +37,4 @@ h5 {
 
 .img-hero img {
     width: 100%;
-}
-
-/*v2*/
-.preloader-wrapper-custom {
-    width: 75px;
-    margin: 30px auto;
 }

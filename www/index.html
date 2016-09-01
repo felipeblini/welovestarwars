@@ -42,9 +42,9 @@
                 <!-- view-home -->
                 <div class="view view-home">
                     <ul id="listaDeFilmes" class="collection">
-                        <!-- spinner -->
+                        <!-- preloader -->
                         <li>
-                            <div class="preloader-wrapper-custom">
+                            <div style="width: 75px; margin: 30px auto;">
                                 <div class="preloader-wrapper active">
                                     <div class="spinner-layer spinner-red-only">
                                         <div class="circle-clipper left">
@@ -60,7 +60,7 @@
                                 </div>
                             </div>
                         </li>
-                        <!-- ./spinner -->
+                        <!-- ./preloader -->
                     </ul>
                 </div>
                 <!-- ./view-home -->
@@ -71,9 +71,9 @@
                         <!-- abas -->
                         <div class="col s12 row-tabs">
                             <ul class="tabs black">
-                                <li class="tab col s3 waves-effect"><a id="aba-personagens" href="#personagens">Personagens</a></li>
-                                <li class="tab col s3 waves-effect"><a id="aba-planetas" href="#planetas">Planetas</a></li>
-                                <li class="tab col s3 waves-effect"><a id="aba-naves" href="#naves">Naves</a></li>
+                                <li class="tab col s3 waves-effect"><a href="#personagens">Personagens</a></li>
+                                <li class="tab col s3 waves-effect"><a href="#planetas">Planetas</a></li>
+                                <li class="tab col s3 waves-effect"><a href="#naves">Naves</a></li>
                             </ul>
                         </div>
                         <!-- ./abas -->
@@ -109,17 +109,18 @@
         </div>
         <!-- ./conteudo-container -->
 
+        <!-- 404 durante o desenvolvimento -->
+        <script src="cordova.js"></script>
+
         <!-- js materialize e jquery -->
         <script src="vendors/jquery/jquery-3.1.0.min.js"></script>
         <script src="vendors/materialize/js/materialize.min.js"></script>
 
-        <!-- js customizado -->
+        <!-- js do app -->
         <script src="js/app.js"></script>
         <script src="js/home.js"></script>
         <script src="js/detalhes.js"></script>
         <script src="js/data-factory.js"></script>
-
-        <!-- 404 em ambiente de desenvolvimento -->
-        <script src="cordova.js"></script>
     </body>
+
 </html>
