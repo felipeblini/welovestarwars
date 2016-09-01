@@ -40,6 +40,6 @@
     
     <!-- js materialize e jquery -->
 
-    <!-- js customizado -->
+    <!-- js do app-->
 </body>
 </html>
