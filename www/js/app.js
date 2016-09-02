@@ -23,6 +23,15 @@ var app = {
     onDeviceReady: function() {
         console.log('device está pronto');
         app.receivedEvent('deviceready');
+
+        // navigator.splashscreen.show();
+        // window.setTimeout(function () {
+        //     navigator.splashscreen.hide();
+        // }, splashDuration - fadeDuration);
+
+        // setTimeout(function() {
+        //     navigator.splashscreen.hide();
+        // }, 2000);
     },
     // Busca filmes quando o device esta pronto e o white list foi carregado
     receivedEvent: function(id) {
