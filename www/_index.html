@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+        <title>We Love Star Wars</title>
+
+        <!-- css materialize -->
+        <link rel="stylesheet" href="vendors/materialize/css/materialize.min.css">
+
+        <!-- icones do materialize -->
+        <link rel="stylesheet" href="vendors/material-icons/material-icons.css">
+
+        <!-- css customizado -->
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+
+    <body>
+        <!-- navbar -->
+        <div class="navbar-fixed">
+            <nav class="black">
+                <div class="nav-wrapper valign-wrapper">
+                    <a href="#" id="btnVoltar" class="hide">
+                        <i class="material-icons waves-effect waves-circle btn-voltar">done</i>
+                    </a>
+                    <a href="#" class="brand-logo center">We Love</a>
+                </div>
+            </nav>
+        </div>
+        <!-- ./navbar -->
+
+        <!-- conteudo-container -->
+        <div class="content">
+            <div class="fundo-preto img-hero">
+                <img class="responsive-img" src="img/starwars.0.0.jpg" alt="">
+            </div>
+
+            <!-- views-container -->
+            <div class="views-container">
+                <!-- view-home -->
+                <div class="view view-home">
+                    <ul id="listaDeFilmes" class="collection">
+                        <!-- preloader -->
+                        <li>
+                            <div style="width: 75px; margin: 30px auto;">
+                                <div class="preloader-wrapper active">
+                                    <div class="spinner-layer spinner-red-only">
+                                        <div class="circle-clipper left">
+                                            <div class="circle"></div>
+                                        </div>
+                                        <div class="gap-patch">
+                                            <div class="circle"></div>
+                                        </div>
+                                        <div class="circle-clipper right">
+                                            <div class="circle"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- ./preloader -->
+                    </ul>
+                </div>
+                <!-- ./view-home -->
+
+                <!-- view-detalhes -->
+                <div class="view view-detalhes">
+                    <div class="row">
+                        <!-- abas -->
+                        <div class="col s12 row-tabs">
+                            <ul class="tabs black">
+                                <li class="tab col s3 waves-effect"><a href="#personagens">Personagens</a></li>
+                                <li class="tab col s3 waves-effect"><a href="#planetas">Planetas</a></li>
+                                <li class="tab col s3 waves-effect"><a href="#naves">Naves</a></li>
+                            </ul>
+                        </div>
+                        <!-- ./abas -->
+
+                        <!-- personagens -->
+                        <div id="personagens" class="col s12">
+                            <table id="listaDePersonagens" class="bordered responsible-table table-dados">
+                                <!-- aqui entra o spinner ou o conteúdo (arquivo data-factory.js) -->
+                            </table>
+                        </div>
+                        <!-- ./personagens -->
+
+                        <!-- planetas -->
+                        <div id="planetas" class="col s12">
+                            <table id="listaDePlanetas" class="bordered responsible-table table-dados">
+                                <!-- aqui entra um spinner ou o conteúdo (arquivo data-factory.js) -->
+                            </table>
+                        </div>
+                        <!-- ./planetas -->
+
+                        <!-- naves -->
+                        <div id="naves" class="col s12">
+                            <table id="listaDeNaves" class="bordered responsible-table table-dados">
+                                <!-- aqui entra um spinner ou o conteúdo (arquivo data-factory.js) -->
+                            </table>
+                        </div>
+                        <!-- ./naves -->
+                    </div>
+                </div>
+                <!-- ./view-detalhes -->
+            </div>
+            <!-- ./views-container -->
+        </div>
+        <!-- ./conteudo-container -->
+
+        <!-- 404 durante o desenvolvimento -->
+        <script src="cordova.js"></script>
+
+        <!-- js materialize e jquery -->
+        <script src="vendors/jquery/jquery-3.1.0.min.js"></script>
+        <script src="vendors/materialize/js/materialize.min.js"></script>
+        <script src="vendors/angular/angular.min.js"></script>
+        
+        <!-- js do app -->
+        <script src="js/app.js"></script>
+        <script src="js/home.js"></script>
+        <script src="js/detalhes.js"></script>
+        <script src="js/data-factory.js"></script>
+    </body>
+
+</html>

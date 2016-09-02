@@ -1,0 +1,143 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'C:\\Users\\blini\\AppData\\Roaming\\npm\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install',
+1 verbose cli   'angular-route@X.Y.Z' ]
+2 info using npm@3.9.6
+3 info using node@v6.3.1
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readLocalPackageData
+7 silly fetchPackageMetaData angular-route@X.Y.Z
+8 silly fetchNamedPackageData angular-route
+9 silly mapToRegistry name angular-route
+10 silly mapToRegistry using default registry
+11 silly mapToRegistry registry https://registry.npmjs.org/
+12 silly mapToRegistry data Result {
+12 silly mapToRegistry   raw: 'angular-route',
+12 silly mapToRegistry   scope: null,
+12 silly mapToRegistry   name: 'angular-route',
+12 silly mapToRegistry   rawSpec: '',
+12 silly mapToRegistry   spec: 'latest',
+12 silly mapToRegistry   type: 'tag' }
+13 silly mapToRegistry uri https://registry.npmjs.org/angular-route
+14 verbose request uri https://registry.npmjs.org/angular-route
+15 verbose request no auth needed
+16 info attempt registry request try #1 at 2:38:41 PM
+17 verbose request id 859540067f455d89
+18 verbose etag "AATO21JNZDS16R3DPYY4IHTGC"
+19 http request GET https://registry.npmjs.org/angular-route
+20 http 304 https://registry.npmjs.org/angular-route
+21 verbose headers { date: 'Sat, 03 Sep 2016 03:55:12 GMT',
+21 verbose headers   via: '1.1 varnish',
+21 verbose headers   'cache-control': 'max-age=300',
+21 verbose headers   etag: '"AATO21JNZDS16R3DPYY4IHTGC"',
+21 verbose headers   age: '17',
+21 verbose headers   connection: 'keep-alive',
+21 verbose headers   'x-served-by': 'cache-gru7120-GRU',
+21 verbose headers   'x-cache': 'HIT',
+21 verbose headers   'x-cache-hits': '1',
+21 verbose headers   'x-timer': 'S1472874912.437199,VS0,VE0',
+21 verbose headers   vary: 'Accept-Encoding' }
+22 silly get cb [ 304,
+22 silly get   { date: 'Sat, 03 Sep 2016 03:55:12 GMT',
+22 silly get     via: '1.1 varnish',
+22 silly get     'cache-control': 'max-age=300',
+22 silly get     etag: '"AATO21JNZDS16R3DPYY4IHTGC"',
+22 silly get     age: '17',
+22 silly get     connection: 'keep-alive',
+22 silly get     'x-served-by': 'cache-gru7120-GRU',
+22 silly get     'x-cache': 'HIT',
+22 silly get     'x-cache-hits': '1',
+22 silly get     'x-timer': 'S1472874912.437199,VS0,VE0',
+22 silly get     vary: 'Accept-Encoding' } ]
+23 verbose etag https://registry.npmjs.org/angular-route from cache
+24 verbose get saving angular-route to C:\Users\blini\AppData\Roaming\npm-cache\registry.npmjs.org\angular-route\.cache.json
+25 verbose correctMkdir C:\Users\blini\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+26 silly fetchNamedPackageData No valid target from cache, forcing network
+27 verbose request uri https://registry.npmjs.org/angular-route
+28 verbose request no auth needed
+29 info attempt registry request try #1 at 2:38:41 PM
+30 http request GET https://registry.npmjs.org/angular-route
+31 http 200 https://registry.npmjs.org/angular-route
+32 verbose headers { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+32 verbose headers   etag: '"AATO21JNZDS16R3DPYY4IHTGC"',
+32 verbose headers   'content-type': 'application/json',
+32 verbose headers   'content-encoding': 'gzip',
+32 verbose headers   'cache-control': 'max-age=300',
+32 verbose headers   'content-length': '10190',
+32 verbose headers   'accept-ranges': 'bytes',
+32 verbose headers   date: 'Sat, 03 Sep 2016 03:55:12 GMT',
+32 verbose headers   via: '1.1 varnish',
+32 verbose headers   age: '17',
+32 verbose headers   connection: 'keep-alive',
+32 verbose headers   'x-served-by': 'cache-gru7120-GRU',
+32 verbose headers   'x-cache': 'HIT',
+32 verbose headers   'x-cache-hits': '2',
+32 verbose headers   'x-timer': 'S1472874912.536251,VS0,VE0',
+32 verbose headers   vary: 'Accept-Encoding' }
+33 silly get cb [ 200,
+33 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+33 silly get     etag: '"AATO21JNZDS16R3DPYY4IHTGC"',
+33 silly get     'content-type': 'application/json',
+33 silly get     'content-encoding': 'gzip',
+33 silly get     'cache-control': 'max-age=300',
+33 silly get     'content-length': '10190',
+33 silly get     'accept-ranges': 'bytes',
+33 silly get     date: 'Sat, 03 Sep 2016 03:55:12 GMT',
+33 silly get     via: '1.1 varnish',
+33 silly get     age: '17',
+33 silly get     connection: 'keep-alive',
+33 silly get     'x-served-by': 'cache-gru7120-GRU',
+33 silly get     'x-cache': 'HIT',
+33 silly get     'x-cache-hits': '2',
+33 silly get     'x-timer': 'S1472874912.536251,VS0,VE0',
+33 silly get     vary: 'Accept-Encoding' } ]
+34 verbose get saving angular-route to C:\Users\blini\AppData\Roaming\npm-cache\registry.npmjs.org\angular-route\.cache.json
+35 verbose correctMkdir C:\Users\blini\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+36 silly fetchPackageMetaData Error: No compatible version found: angular-route@X.Y.Z
+36 silly fetchPackageMetaData Valid install targets:
+36 silly fetchPackageMetaData 1.5.8, 1.5.7, 1.5.6, 1.5.5, 1.5.3, 1.5.2, 1.5.1, 1.5.0, 1.5.0-rc.2, 1.5.0-rc.1, 1.5.0-rc.0, 1.5.0-beta.2, 1.5.0-beta.0, 1.4.12, 1.4.11, 1.4.10, 1.4.9, 1.4.8, 1.4.7, 1.4.6, 1.4.5, 1.4.4, 1.4.3, 1.4.2, 1.4.1, 1.4.0, 1.4.0-rc.2, 1.4.0-rc.1, 1.4.0-rc.0, 1.4.0-beta.6, 1.4.0-beta.5, 1.4.0-beta.4, 1.4.0-beta.3, 1.4.0-beta.2, 1.4.0-beta.1, 1.4.0-beta.0, 1.3.20, 1.3.19, 1.3.18, 1.3.17, 1.3.16, 1.3.15, 1.3.14, 1.3.13, 1.3.12, 1.3.11, 1.3.10, 1.3.9, 1.3.8, 1.3.7, 1.3.6, 1.3.5, 1.3.4, 1.3.4-build.3588, 1.3.3, 1.3.2, 1.3.1, 1.3.0, 1.3.0-rc.5, 1.2.30, 1.2.29, 1.2.28, 1.2.27, 1.2.17-build.163.1
+36 silly fetchPackageMetaData
+36 silly fetchPackageMetaData     at pickVersionFromRegistryDocument (C:\Users\blini\AppData\Roaming\npm\node_modules\npm\lib\fetch-package-metadata.js:170:16)
+36 silly fetchPackageMetaData     at C:\Users\blini\AppData\Roaming\npm\node_modules\npm\node_modules\iferr\index.js:13:50
+36 silly fetchPackageMetaData     at C:\Users\blini\AppData\Roaming\npm\node_modules\npm\lib\utils\pulse-till-done.js:19:8
+36 silly fetchPackageMetaData     at saved (C:\Users\blini\AppData\Roaming\npm\node_modules\npm\lib\cache\caching-client.js:174:7)
+36 silly fetchPackageMetaData     at C:\Users\blini\AppData\Roaming\npm\node_modules\npm\node_modules\graceful-fs\polyfills.js:210:7
+36 silly fetchPackageMetaData     at FSReqWrap.oncomplete (fs.js:123:15)
+36 silly fetchPackageMetaData  error for angular-route@X.Y.Z Error: No compatible version found: angular-route@X.Y.Z
+36 silly fetchPackageMetaData Valid install targets:
+36 silly fetchPackageMetaData 1.5.8, 1.5.7, 1.5.6, 1.5.5, 1.5.3, 1.5.2, 1.5.1, 1.5.0, 1.5.0-rc.2, 1.5.0-rc.1, 1.5.0-rc.0, 1.5.0-beta.2, 1.5.0-beta.0, 1.4.12, 1.4.11, 1.4.10, 1.4.9, 1.4.8, 1.4.7, 1.4.6, 1.4.5, 1.4.4, 1.4.3, 1.4.2, 1.4.1, 1.4.0, 1.4.0-rc.2, 1.4.0-rc.1, 1.4.0-rc.0, 1.4.0-beta.6, 1.4.0-beta.5, 1.4.0-beta.4, 1.4.0-beta.3, 1.4.0-beta.2, 1.4.0-beta.1, 1.4.0-beta.0, 1.3.20, 1.3.19, 1.3.18, 1.3.17, 1.3.16, 1.3.15, 1.3.14, 1.3.13, 1.3.12, 1.3.11, 1.3.10, 1.3.9, 1.3.8, 1.3.7, 1.3.6, 1.3.5, 1.3.4, 1.3.4-build.3588, 1.3.3, 1.3.2, 1.3.1, 1.3.0, 1.3.0-rc.5, 1.2.30, 1.2.29, 1.2.28, 1.2.27, 1.2.17-build.163.1
+36 silly fetchPackageMetaData
+36 silly fetchPackageMetaData     at pickVersionFromRegistryDocument (C:\Users\blini\AppData\Roaming\npm\node_modules\npm\lib\fetch-package-metadata.js:170:16)
+36 silly fetchPackageMetaData     at C:\Users\blini\AppData\Roaming\npm\node_modules\npm\node_modules\iferr\index.js:13:50
+36 silly fetchPackageMetaData     at C:\Users\blini\AppData\Roaming\npm\node_modules\npm\lib\utils\pulse-till-done.js:19:8
+36 silly fetchPackageMetaData     at saved (C:\Users\blini\AppData\Roaming\npm\node_modules\npm\lib\cache\caching-client.js:174:7)
+36 silly fetchPackageMetaData     at C:\Users\blini\AppData\Roaming\npm\node_modules\npm\node_modules\graceful-fs\polyfills.js:210:7
+36 silly fetchPackageMetaData     at FSReqWrap.oncomplete (fs.js:123:15)
+37 silly rollbackFailedOptional Starting
+38 silly rollbackFailedOptional Finishing
+39 silly runTopLevelLifecycles Starting
+40 silly runTopLevelLifecycles Finishing
+41 silly install printInstalled
+42 verbose stack Error: No compatible version found: angular-route@X.Y.Z
+42 verbose stack Valid install targets:
+42 verbose stack 1.5.8, 1.5.7, 1.5.6, 1.5.5, 1.5.3, 1.5.2, 1.5.1, 1.5.0, 1.5.0-rc.2, 1.5.0-rc.1, 1.5.0-rc.0, 1.5.0-beta.2, 1.5.0-beta.0, 1.4.12, 1.4.11, 1.4.10, 1.4.9, 1.4.8, 1.4.7, 1.4.6, 1.4.5, 1.4.4, 1.4.3, 1.4.2, 1.4.1, 1.4.0, 1.4.0-rc.2, 1.4.0-rc.1, 1.4.0-rc.0, 1.4.0-beta.6, 1.4.0-beta.5, 1.4.0-beta.4, 1.4.0-beta.3, 1.4.0-beta.2, 1.4.0-beta.1, 1.4.0-beta.0, 1.3.20, 1.3.19, 1.3.18, 1.3.17, 1.3.16, 1.3.15, 1.3.14, 1.3.13, 1.3.12, 1.3.11, 1.3.10, 1.3.9, 1.3.8, 1.3.7, 1.3.6, 1.3.5, 1.3.4, 1.3.4-build.3588, 1.3.3, 1.3.2, 1.3.1, 1.3.0, 1.3.0-rc.5, 1.2.30, 1.2.29, 1.2.28, 1.2.27, 1.2.17-build.163.1
+42 verbose stack
+42 verbose stack     at pickVersionFromRegistryDocument (C:\Users\blini\AppData\Roaming\npm\node_modules\npm\lib\fetch-package-metadata.js:170:16)
+42 verbose stack     at C:\Users\blini\AppData\Roaming\npm\node_modules\npm\node_modules\iferr\index.js:13:50
+42 verbose stack     at C:\Users\blini\AppData\Roaming\npm\node_modules\npm\lib\utils\pulse-till-done.js:19:8
+42 verbose stack     at saved (C:\Users\blini\AppData\Roaming\npm\node_modules\npm\lib\cache\caching-client.js:174:7)
+42 verbose stack     at C:\Users\blini\AppData\Roaming\npm\node_modules\npm\node_modules\graceful-fs\polyfills.js:210:7
+42 verbose stack     at FSReqWrap.oncomplete (fs.js:123:15)
+43 verbose cwd c:\dev\welovestarwars\weloveswapp-project
+44 error Windows_NT 10.0.10586
+45 error argv "C:\\Program Files\\nodejs\\node.exe" "C:\\Users\\blini\\AppData\\Roaming\\npm\\node_modules\\npm\\bin\\npm-cli.js" "install" "angular-route@X.Y.Z"
+46 error node v6.3.1
+47 error npm  v3.9.6
+48 error No compatible version found: angular-route@X.Y.Z
+48 error Valid install targets:
+48 error 1.5.8, 1.5.7, 1.5.6, 1.5.5, 1.5.3, 1.5.2, 1.5.1, 1.5.0, 1.5.0-rc.2, 1.5.0-rc.1, 1.5.0-rc.0, 1.5.0-beta.2, 1.5.0-beta.0, 1.4.12, 1.4.11, 1.4.10, 1.4.9, 1.4.8, 1.4.7, 1.4.6, 1.4.5, 1.4.4, 1.4.3, 1.4.2, 1.4.1, 1.4.0, 1.4.0-rc.2, 1.4.0-rc.1, 1.4.0-rc.0, 1.4.0-beta.6, 1.4.0-beta.5, 1.4.0-beta.4, 1.4.0-beta.3, 1.4.0-beta.2, 1.4.0-beta.1, 1.4.0-beta.0, 1.3.20, 1.3.19, 1.3.18, 1.3.17, 1.3.16, 1.3.15, 1.3.14, 1.3.13, 1.3.12, 1.3.11, 1.3.10, 1.3.9, 1.3.8, 1.3.7, 1.3.6, 1.3.5, 1.3.4, 1.3.4-build.3588, 1.3.3, 1.3.2, 1.3.1, 1.3.0, 1.3.0-rc.5, 1.2.30, 1.2.29, 1.2.28, 1.2.27, 1.2.17-build.163.1
+49 error If you need help, you may report this error at:
+49 error     <https://github.com/npm/npm/issues>
+50 verbose exit [ 1, true ]
