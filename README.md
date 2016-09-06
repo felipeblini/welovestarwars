@@ -35,6 +35,6 @@ Durante o curso iremos caminhar de um projeto HTML simples, com JQuery e Materia
 
 Em cada fase será aplicada uma tarefa para fixar o aprendizado
 
-Em cada Branch está descrito todos programas e comandos necessários para rodar cada fase do projeto
+Em cada Branch está descrito todos programas, bibliotecas, frameworks e comandos necessários para rodar cada fase do projeto
 
 Slides: http://goo.gl/hTNCmh
