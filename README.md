@@ -29,5 +29,8 @@ http://bower.io
 ##Gulp
 http://gulpjs.com/
 
-##Wiredep
+###Gulp-clean
+https://www.npmjs.com/package/gulp-clean
+
+###Wiredep
 https://www.npmjs.com/package/wiredep
