@@ -19,6 +19,9 @@
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-clean": "^0.3.2",
+    "gulp-ng-annotate": "^2.0.0",
+    "gulp-uglify": "^2.0.0",
+    "gulp-usemin": "^0.3.24",
     "wiredep": "^4.0.0"
   }
 }
