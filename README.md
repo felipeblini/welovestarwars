@@ -35,7 +35,7 @@ https://www.npmjs.com/package/gulp-clean
 ####wiredep
 https://www.npmjs.com/package/wiredep
 
-####ng-annotate
+####gulp-ng-annotate
 https://www.npmjs.com/package/gulp-ng-annotate
 
 ####gulp-uglify
