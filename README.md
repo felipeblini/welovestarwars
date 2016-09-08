@@ -12,7 +12,11 @@ UI Router para o Angular
 -https://github.com/angular-ui/ui-router/wiki
 -https://angular-ui.github.io/ui-router/
 
-
-
 ###Jhon Papa Style Guide para o Angular
 https://github.com/johnpapa/angular-styleguide/blob/master/a1/README.md
+
+###ngAnimate
+https://docs.angularjs.org/api/ngAnimate
+
+####Exemplo
+http://www.w3schools.com/angular/angular_animations.asp
