@@ -22,3 +22,12 @@ https://github.com/johnpapa/ng-demos/tree/master/modular
 ##ngAnimate
 https://docs.angularjs.org/api/ngAnimate
 - Exemplo: http://www.w3schools.com/angular/angular_animations.asp
+
+##Bower
+http://bower.io
+
+##Gulp
+http://gulpjs.com/
+
+###Gulp wiredep Task
+https://www.npmjs.com/package/gulp-wiredep
