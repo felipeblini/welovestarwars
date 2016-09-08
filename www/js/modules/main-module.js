@@ -1,1 +1,0 @@
-angular.module('wlsw-app', ['ngRoute']);

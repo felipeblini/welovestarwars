@@ -2,3 +2,5 @@
 /platforms
 /.*
 *.zip
+/node_modules
+/src/lib

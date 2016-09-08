@@ -1,4 +1,11 @@
 {
-    "name": "WeLoveStarWars",
-    "app_id": "br.com.welovestarwars.app"
+    "name": "angular-app",
+    "app_id": "com.angular.app",
+    "gulpStartupTasks": [
+        "deployfiles"
+    ],
+    "watchPatterns": [
+        "www/**/*",
+        "!www/lib/**/*"
+    ]
 }
