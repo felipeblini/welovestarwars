@@ -5,12 +5,13 @@ Curso Desenvolvimento de Aplicativos Híbridos com PhoneGap/Cordova, e Ionic
 https://angularjs.org/
 
 ##UI Router
-https://ui-router.github.io/ng1/
+- https://ui-router.github.io/
 
-##AngularUI Router
-UI Router para o Angular
-- https://github.com/angular-ui/ui-router/wiki
-- https://angular-ui.github.io/ui-router/
+##AngularUI Router (UI Router para o Angular)
+- https://angular-ui.github.io/ui-router/ (Site)
+- https://angular-ui.github.io/ui-router/site/#/api/ui.router (API)
+- https://github.com/angular-ui/ui-router/wiki (Documentação)
+
 
 ##Jhon Papa Style Guide para o Angular
 https://github.com/johnpapa/angular-styleguide/blob/master/a1/README.md
