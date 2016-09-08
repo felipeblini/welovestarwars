@@ -16,7 +16,7 @@ https://angularjs.org/
 ##Jhon Papa Style Guide para o Angular
 https://github.com/johnpapa/angular-styleguide/blob/master/a1/README.md
 
-###Full Modular Angular App (Jhon Papa)
+####Full Modular Angular App (Jhon Papa)
 https://github.com/johnpapa/ng-demos/tree/master/modular
 
 ##ngAnimate
@@ -29,8 +29,17 @@ http://bower.io
 ##Gulp
 http://gulpjs.com/
 
-###Gulp-clean
+####gulp-clean
 https://www.npmjs.com/package/gulp-clean
 
-###Wiredep
+####wiredep
 https://www.npmjs.com/package/wiredep
+
+####ng-annotate
+https://www.npmjs.com/package/gulp-ng-annotate
+
+####gulp-uglify
+https://www.npmjs.com/search?q=gulp-uglify
+
+####gulp-usemin
+https://www.npmjs.com/package/gulp-usemin
