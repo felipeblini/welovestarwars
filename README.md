@@ -68,3 +68,6 @@ https://www.npmjs.com/package/gulp-usemin
 
 ##ngCordova
 http://ngcordova.com/
+
+##Ionic Bower
+https://github.com/driftyco/ionic-bower
