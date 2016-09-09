@@ -71,3 +71,5 @@ http://ngcordova.com/
 
 ##Ionic Bower
 https://github.com/driftyco/ionic-bower
+
+$ bower install driftyco/ionic-bower#1.1.1
