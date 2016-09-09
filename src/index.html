@@ -14,7 +14,7 @@
     <body>
         <h1>Filmes</h1>
 
-        <busca-filmes><i>Carregando componente...</i></busca-filmes>
+        <section ui-view></section>
 
         <!-- build:js bundle/js/app.concat.min.js -->
         <!-- bower:js -->
@@ -24,7 +24,13 @@
         <!-- endbower -->
 
         <script src="js/app.js"></script>
+        <script src="js/app.routes.js"></script>
+
+        <script src="js/controllers/controllers.module.js"></script>
         <script src="js/controllers/home-ctrl.js"></script>
+        <script src="js/controllers/detalhes-filme-ctrl.js"></script>
+        <script src="js/controllers/detalhes-personagem-ctrl.js"></script>
+        
         <script src="js/services/daos/FilmesDAO.js"></script>
 
         <script src="components/custom-directives/busca-filmes/busca-filmes-directive.js"></script>

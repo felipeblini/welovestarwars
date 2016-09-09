@@ -5,6 +5,7 @@
         "minhaapp.controllers",
         "minhaapp.services",
         "ngAnimate",
-        "buscaFilmes.directive"
+        "buscaFilmes.directive",
+        "ui.router"
     ]);
 })();
