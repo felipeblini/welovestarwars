@@ -13,8 +13,9 @@ _$ gulp watch-dev_
 Isso vai assistir as mudanças no código e compilar para a pasta www, necessária para o Ionic livereload
 
 ###Rodar o projeto no ambiente de Desenvolvimento
-_$ cd src_ 
-_$ http-server_ (instalar o http-server pelo npm)
+No console, na raiz do projeto:
+- _$ cd src_ 
+- _$ http-server_ (instalar o http-server pelo npm)
 
 ###Visualizar projeto no ambiente de Produção
 _$ gulp_
@@ -64,3 +65,6 @@ https://www.npmjs.com/search?q=gulp-uglify
 
 ####gulp-usemin
 https://www.npmjs.com/package/gulp-usemin
+
+##ngCordova
+http://ngcordova.com/
