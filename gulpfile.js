@@ -28,7 +28,7 @@ gulp.task('injetaDep', function() {
         .pipe(gulp.dest('./src'));
 });
 
-gulp.task('whatchSrc', function() {
+gulp.task('start-dev', function() {
     gulp.watch('bower.json', ['injetaDep']);
     gulp.watch(["src/**/*", "!src/lib/**/*"], ['deploy']);
 });
@@ -58,10 +58,8 @@ gulp.task('copyCustomDirectivesJsFiles', ['copyJsFiles'], function() {
     //}, 700);
 });
 
-gulp.task('startIonicServer', ['cleanJS'], function(){
-    //setTimeout(function() {
-        exec('ionic serve', function (err, stdout, stderr) {});
-    //}, 2500);
+gulp.task('startIonicServer', ['cleanJS'], function() {
+    exec('ionic serve', function (err, stdout, stderr) {});
 });
 
 gulp.task('compileFiles', ['copyAll'], function() {
@@ -77,4 +75,4 @@ gulp.task('copyAll', ['copyFiles', 'copyJsFiles', 'copyCustomDirectivesJsFiles']
 
 gulp.task('deploy', ['copyAll', 'compileFiles', 'cleanJS']);
 
-gulp.task('default', ['deploy', 'startIonicServer']);
+gulp.task('serve-prod', ['deploy', 'startIonicServer']);
