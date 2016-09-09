@@ -69,7 +69,14 @@ https://www.npmjs.com/package/gulp-usemin
 ##ngCordova
 http://ngcordova.com/
 
-##Ionic Bower
+##Ionic Framework
+
+https://www.ionicframework.com
+
+###Ionic Bower
 https://github.com/driftyco/ionic-bower
 
 $ bower install driftyco/ionic-bower#1.1.1
+
+###Componentes
+http://ionicframework.com/docs/components/
