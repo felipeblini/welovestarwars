@@ -4,12 +4,20 @@ Curso Desenvolvimento de Aplicativos Híbridos com PhoneGap/Cordova, e Ionic
 Nessa branch estudamos Angular com UI Router e como trabalhar com Gulp e Bower já que o Ionic usa esses por padrão.
 Estudamos também uma arquitetura de software moderno separando nosso código entre os ambientes de Desenvolvimento e Produção, 'compilação' do projeto com uglify e concat e deploy apenas dos arquivos necessários para produção, eliminando gotrdura na hora que nosso usuário for fazer o dowload da nossa app nas lojas de aplicativos.
 
-Para fazer alterações no código rode antes no console _$ gulp watch-dev_
-Isso vai assistir as mudanças no código e compilar para a pasta www necessária para o Ionic
+##Para Rodar e Alterar Código
+Rode no Console:
 
-Para rodar o projeto no ambiente de produção instale o **pacote do Node.js**: _http-server_, e rode no console _$ cd src_ e em sequência: _$ http-server_
+###Alterações no código 
+_$ gulp watch-dev_
 
-Para visualizar o projeto no ambiente de produção rode o comando _$ gulp_ no console
+Isso vai assistir as mudanças no código e compilar para a pasta www, necessária para o Ionic livereload
+
+###Rodar o projeto no ambiente de Desenvolvimento
+_$ cd src_ 
+_$ http-server_ (instalar o http-server pelo npm)
+
+###Visualizar projeto no ambiente de Produção
+_$ gulp_
 
 ##http-server
 _$ npm install -g http-server_
