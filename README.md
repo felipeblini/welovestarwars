@@ -1,7 +1,7 @@
-# welovestarwars
+# welovestarwars - branch 2 - Protótipo
 Curso Desenvolvimento de Aplicativos Híbridos com PhoneGap/Cordova, e Ionic
 
-###Essa é a branch 2 - Integração com o Phonegap e Build do Protótipo
+###Essa é a branch 2 - Integração com o PhoneGap e Build do Protótipo
 
 Nessa branch nós apenas transferimos os arquivos para dentro de uma pasta chamada _www_ (padrão do PhoneGap) e criamos o arquivo _config.xml_.
 
