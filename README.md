@@ -37,5 +37,9 @@ https://moqups.com/
 ####Ionic Creator (Online - freemium)
 https://creator.ionic.io
 
+##Rodar o Projeto
+
+Pra rodar e visualizar essa projeto, basta abrir o arquivo index.html no navegador
+
 
 
