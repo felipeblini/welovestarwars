@@ -11,23 +11,21 @@ Aprendemos que devemos colocar esses arquivos base, **icon.png para o ícone** e
 
 Vimos também como configurar as preferências da splashscreen como tempo de exibição, fade e preloader.
 
-##Plugin Cordova Splashscreen
+###Plugin Cordova Splashscreen
 https://www.npmjs.com/package/cordova-plugin-splashscreen
 
-##Documentação
+###Documentação
 http://ionicframework.com/docs/cli/icon-splashscreen.html
 
-##Imagens Base da Splash
-http://code.ionicframework.com/resources/splash.psd
+###Imagens Base
+- splash: http://code.ionicframework.com/resources/splash.psd
+- ícone: http://code.ionicframework.com/resources/icon.psd
 
-##Imagem base do ícone
-http://code.ionicframework.com/resources/icon.psd
-
-##Executar Comando
-No console, na pasta do projeto, com os arquivos adicionados na pasta _resources_: $ ionic resources
+###Executar Comando
+No console, na pasta do projeto, com os arquivos adicionados na pasta _resources_: _$ ionic resources_
 
 ##Rodar essa Branch
 Continuamos usanddo o servidor do PhoneGap.
 
-Na raiz do projeto: $ phonegap serve
+Na raiz do projeto: _$ phonegap serve_
 
