@@ -4,26 +4,26 @@ var dataFactory = {
     resource: 'http://swapi.co/api/',
 
     preloader: '<tbody>' +
-                '<tr>' +
-                    '<td>' +
-                        '<div style="width: 75px; margin: 30px auto;">' +
-                            '<div class="preloader-wrapper active">' +
-                                '<div class="spinner-layer spinner-red-only">' +
-                                    '<div class="circle-clipper left">' +
-                                        '<div class="circle"></div>' +
-                                    '</div>' +
-                                    '<div class="gap-patch">' +
-                                        '<div class="circle"></div>' +
-                                    '</div>' +
-                                    '<div class="circle-clipper right">' +
-                                        '<div class="circle"></div>' +
-                                    '</div>' +
-                                '</div>' +
-                            '</div>' +
-                        '</div>' +
-                    '</td>' +
-                '</tr>' +
-            '</tbody>',
+    '<tr>' +
+    '<td>' +
+    '<div style="width: 75px; margin: 30px auto;">' +
+    '<div class="preloader-wrapper active">' +
+    '<div class="spinner-layer spinner-red-only">' +
+    '<div class="circle-clipper left">' +
+    '<div class="circle"></div>' +
+    '</div>' +
+    '<div class="gap-patch">' +
+    '<div class="circle"></div>' +
+    '</div>' +
+    '<div class="circle-clipper right">' +
+    '<div class="circle"></div>' +
+    '</div>' +
+    '</div>' +
+    '</div>' +
+    '</div>' +
+    '</td>' +
+    '</tr>' +
+    '</tbody>',
 
     buscaFilmes: function (uiEl) {
         console.log('buscando filmes...');
@@ -44,23 +44,23 @@ var dataFactory = {
                 console.log('filmes: ' + filmes);
 
                 filmes.forEach(function (item) {
-                    if(!item.img) {
+                    if (!item.img) {
                         that.identificaFotoFilme(item);
                     }
 
                     var title = item.title;
-                
+
                     var newHtml = '<li class="collection-item avatar">' +
                         '<a data-id=' + item.episode_id + ' data-title=' + title.split(' ').join('+') + ' href="#">' +
-                            '<img src="img/' + item.img + '" alt="" class="circle">' +
-                            '<span>' + title + '</span>' +
-                            '<p>' +
-                                '<small>Filme estreiado em: ' + item.release_date.split('-')[0] + '</small><br>' +
-                                '<small>Diretor: ' + item.director + '</small>' +
-                            '</p>' +
-                            '<i class="material-icons secondary-content">&#xE8E4;</i>' +
+                        '<img src="img/' + item.img + '" alt="" class="circle">' +
+                        '<span>' + title + '</span>' +
+                        '<p>' +
+                        '<small>Filme estreiado em: ' + item.release_date.split('-')[0] + '</small><br>' +
+                        '<small>Diretor: ' + item.director + '</small>' +
+                        '</p>' +
+                        '<i class="material-icons secondary-content">&#xE8E4;</i>' +
                         '</a>' +
-                    '</li>';
+                        '</li>';
 
                     uiLista.innerHTML += newHtml;
                 }, this);
@@ -70,139 +70,134 @@ var dataFactory = {
                 // function  criada na home.js
                 window.addClickFilme();
             },
-            fail: function(e) {
-                console.log('fail: ' + e);
+            error: function (e) {
+                console.log('error:', e);
                 Materialize.toast('Erro, tente novamente', 3500);
             }
         });
     },
 
     identificaFotoFilme: function (item) {
-        switch (String(item.episode_id)) {
-            case '1':
-                item.img = 'filme-1-p.jpg';
-                break;
-            case '2':
-                item.img = 'filme-2-p.jpg';
-                break;
-            case '3':
-                item.img = 'filme-3-p.jpg';
-                break;
-            case '4':
-                item.img = 'filme-4-p.jpg';
-                break;
-            case '5':
-                item.img = 'filme-5-p.jpg';
-                break;
-            case '6':
-                item.img = 'filme-6-p.jpg';
-                break;
-            case '7':
-                item.img = 'filme-7-p.jpg';
-                break;
-            default:
-                item.img = 'no-pic-p.jpg'
-                break;
-        }
+        item.img = 'filme-' + String(item.episode_id) + '-p.jpg';
     },
 
-    buscaPersonagens: function(idFilme, uiEl) {
+    buscaPersonagens: function (idFilme, uiEl) {
         console.log('buscando personagens...');
         var uiLista = $(uiEl);
-        
-        if(!uiLista.data('loaded')) {        
+
+        if (!uiLista.data('loaded')) {
             uiLista.html(this.preloader);
 
             $.ajax({
                 url: this.resource + "films/" + idFilme + "/",
-                success: function(resultado) {
+                success: function (resultado) {
                     var personagens = resultado.characters;
                     var length = personagens.length;
-                    var itensArray = []; 
+                    var itensArray = [];
                     var i = 0;
 
-                    personagens.forEach(function(item) {
-                        $.get(item, function(resultado) {
+                    personagens.forEach(function (item) {
+                        $.ajax({
+                            url: item,
+                            success: function (resultado, status) {
 
-                            var newItem = '<tr>' +
-                                                '<td>' + resultado.name + '</td>' +
-                                                '<td>' + resultado.height + '</td>' +
-                                                '<td>' + resultado.mass + '</td>' +
-                                        '</tr>';
+                                console.log("Status request personagem: " + status);
 
-                            itensArray.push(newItem);
+                                var newItem = '<tr>' +
+                                    '<td>' + resultado.name + '</td>' +
+                                    '<td>' + resultado.height + '</td>' +
+                                    '<td>' + resultado.mass + '</td>' +
+                                    '</tr>';
 
-                            i++;
+                                itensArray.push(newItem);
 
-                            if(i == length) {
-                                var tHead = '<thead>' +
-                                    '<tr>' +
+                                i++;
+
+                                if (i == length) {
+                                    var tHead = '<thead>' +
+                                        '<tr>' +
                                         '<th>Nome</th>' +
                                         '<th>Peso</th>' +
                                         '<th>Massa</th>' +
-                                    '</tr>' +
-                                '</thead>';
+                                        '</tr>' +
+                                        '</thead>';
 
-                                uiLista.html(tHead + '<tbody>');
+                                    uiLista.html(tHead + '<tbody>');
 
-                                uiLista.html(uiLista.html() + itensArray.join('') + '</tbody>');
+                                    uiLista.html(uiLista.html() + itensArray.join('') + '</tbody>');
 
-                                uiLista.data('loaded', true);
+                                    uiLista.data('loaded', true);
 
-                                Materialize.toast(length + ' personagens encontrados', 3500);
+                                    Materialize.toast(length + ' personagen(s) encontrado(s)', 3500);
+                                }
+                            },
+                            error: function (e) {
+                                console.log('error no item: ' + item + ":", e);
                             }
                         });
                     }, this);
+                },
+                error: function (e) {
+                    console.log('error:', e);
+                    Materialize.toast('Erro, tente novamente', 3500);
                 }
             });
         }
     },
 
-    buscaPlanetas: function(idFilme, uiEl) {
+    buscaPlanetas: function (idFilme, uiEl) {
         console.log('buscando planetas...');
 
         var uiLista = $(uiEl);
-        
-        if(!uiLista.data('loaded')) {        
+
+        if (!uiLista.data('loaded')) {
             uiLista.html(this.preloader);
-        
+
             $.ajax({
                 url: this.resource + "films/" + idFilme + "/",
-                success: function(resultado) {
+                success: function (resultado) {
                     var planetas = resultado.planets;
                     var length = planetas.length;
-                    var itensArray = []; 
+                    var itensArray = [];
                     var i = 0;
 
-                    planetas.forEach(function(item) {
-                        $.get(item, function(resultado) {
+                    planetas.forEach(function (item) {
+                        $.ajax({
+                            url: item,
+                            success: function (resultado) {
 
-                            var newItem = '<tr>' +
-                                                '<td>' + resultado.name + '</td>' +
-                                                '<td>' + resultado.diameter + '</td>' +
-                                                '<td>' + resultado.population  + '</td>' +
-                                        '</tr>';
+                                console.log("Status request planeta: " + status);
 
-                            itensArray.push(newItem);
+                                var newItem = '<tr>' +
+                                    '<td>' + resultado.name + '</td>' +
+                                    '<td>' + resultado.diameter + '</td>' +
+                                    '<td>' + resultado.population + '</td>' +
+                                    '</tr>';
 
-                            i++;
+                                itensArray.push(newItem);
 
-                            if(i == length) {
-                                var tHead = '<thead>' +
-                                    '<tr>' +
+                                i++;
+
+                                if (i == length) {
+                                    var tHead = '<thead>' +
+                                        '<tr>' +
                                         '<th>Nome</th>' +
                                         '<th>Diâmetro</th>' +
                                         '<th>População</th>' +
-                                    '</tr>' +
-                                '</thead>';
+                                        '</tr>' +
+                                        '</thead>';
 
-                                uiLista.html(tHead + '<tbody>');
+                                    uiLista.html(tHead + '<tbody>');
 
-                                uiLista.html(uiLista.html() + itensArray.join('') + '</tbody>');
+                                    uiLista.html(uiLista.html() + itensArray.join('') + '</tbody>');
 
-                                uiLista.data('loaded', true);
+                                    uiLista.data('loaded', true);
 
-                                Materialize.toast(length + ' planetas encontrados', 3500);
+                                    Materialize.toast(length + ' planeta(s) encontrado(s)', 3500);
+                                }
+                            },
+                            error: function (e) {
+                                console.log('error no item: ' + item + ":", e);
                             }
                         });
                     }, this);
@@ -211,54 +206,66 @@ var dataFactory = {
         }
     },
 
-    buscaNaves: function(idFilme, uiEl) {
+    buscaNaves: function (idFilme, uiEl) {
         console.log('buscando naves...');
 
         var uiLista = $(uiEl);
 
-        if(!uiLista.data('loaded')) {        
+        if (!uiLista.data('loaded')) {
             uiLista.html(this.preloader);
 
             $.ajax({
                 url: this.resource + "films/" + idFilme + "/",
-                success: function(resultado) {
+                success: function (resultado) {
                     var naves = resultado.starships;
                     var length = naves.length;
-                    var itensArray = []; 
+                    var itensArray = [];
                     var i = 0;
 
-                    naves.forEach(function(item) {
-                        $.get(item, function(resultado) {
+                    naves.forEach(function (item) {
+                        $.ajax({
+                            url: item,
+                            success: function (resultado, status) {
 
-                            var newItem = '<tr>' +
-                                                '<td>' + resultado.name + '</td>' +
-                                                '<td>' + resultado.model + '</td>' +
-                                                '<td>' + resultado.passengers + '</td>' +
-                                        '</tr>';
+                                console.log("Status request planeta: " + status);
 
-                            itensArray.push(newItem);
+                                var newItem = '<tr>' +
+                                    '<td>' + resultado.name + '</td>' +
+                                    '<td>' + resultado.model + '</td>' +
+                                    '<td>' + resultado.passengers + '</td>' +
+                                    '</tr>';
 
-                            i++;
+                                itensArray.push(newItem);
 
-                            if(i == length) {
-                                var tHead = '<thead>' +
-                                    '<tr>' +
+                                i++;
+
+                                if (i == length) {
+                                    var tHead = '<thead>' +
+                                        '<tr>' +
                                         '<th>Nome</th>' +
                                         '<th>Modelo</th>' +
                                         '<th>Passageiros</th>' +
-                                    '</tr>' +
-                                '</thead>';
+                                        '</tr>' +
+                                        '</thead>';
 
-                                uiLista.html(tHead + '<tbody>');
+                                    uiLista.html(tHead + '<tbody>');
 
-                                uiLista.html(uiLista.html() + itensArray.join('') + '</tbody>');
+                                    uiLista.html(uiLista.html() + itensArray.join('') + '</tbody>');
 
-                                uiLista.data('loaded', true);
+                                    uiLista.data('loaded', true);
 
-                                Materialize.toast(length + ' naves encontrados', 3500);
+                                    Materialize.toast(length + ' nave(s) encontrada(s)', 3500);
+                                }
+                            },
+                            error: function (e) {
+                                console.log('error no item: ' + item + ":", e);
                             }
                         });
                     }, this);
+                },
+                error: function (e) {
+                    console.log('error:', e);
+                    Materialize.toast('Erro, tente novamente', 3500);
                 }
             });
         }
