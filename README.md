@@ -37,7 +37,7 @@ O Ionic fará o upload dos arquivos base para os servidores remotos dele, redime
 - No `config.xml` adicione:
 ```xml
 <platform name="browser">
-      <preference name="SplashScreen" value="img/splash-browser.png" /> ou deixe "" caso use os nomes padrões
+      <preference name="SplashScreen" value="img/splash-browser.png" /> ou deixe "" caso sua imagem esteja em /img_/logo.png
       <preference name="SplashScreenDelay" value="3000" />
       <preference name="SplashScreenBackgroundColor" value="black" />
       <preference name="ShowSplashScreen" value="true" />
