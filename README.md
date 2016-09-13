@@ -3,17 +3,15 @@ Curso Desenvolvimento de Aplicativos Híbridos com PhoneGap/Cordova, e Ionic
 
 ###Essa é a branch 2 - Integração com o PhoneGap e Build do Protótipo
 
-Nessa branch nós apenas transferimos os arquivos para dentro de uma pasta chamada _www_ (padrão do PhoneGap) e criamos o arquivo _config.xml_.
+Nessa branch nós apenas instalamos o **PhoneGap** através do download do **PhoneGap Desktop** e criamos nosso primeiro projeto PhoneGap. Excluímos o conteúdo da pasta `www` criada pelo PhoneGap e transferimos nossos arquivos, criados na _branch_ anterior, para dentro dela, e estudamos o arquivo `config.xml` também criado pelo PhoneGap.
 
-Fizemos isso instalando o **PhoneGap** através do **PhoneGap Desktop** e criando um novo projeto PhoneGap. Vimos a estrutura de arquivos e pastas do _scaffolding_ que ele faz e excluímos os arquivos de dentro da pasta _www_ criada e colocamos os nossos arquivos criados na _branch_ anterior.
+Vimos a estrutura de arquivos e pastas do _scaffolding_ que o PhoneGap faz e estudamos as pastas `plugins` e `plataforms` que o PhoneGap cria automaticamente.
 
-Vimos as **pastas plugins e plataforms** que o PhoneGap cria automaticamente e estudamos o arquchrivo **config.xml**.
+Aprendemos como **levantar o servidor local do PhoneGap** para visualizar nosso app no navegador e como usar o **Developer Tools do Chrome** para fazer o **Debug** do nosso código e layout.
 
-Aprendemos como **levantar o servidor local do PhoneGap** para visualizar nosso app no navegador e como usar o **Developer Tools do Chrome** para fazer o Debug.
+Vimos também como usar o **PhoneGap Developer** para visualizarmos o app no nosso device de maneira bem rápida e depois como fazer o **build** do app usando o ambiente configurado nas nuvens do PhoneGap - o **PhoneGap Build**, para fazermos esse **build** sem precisar inntalar e configurar nada no nosso computador. Depois vimos uma maneira de entregar o protótipo do app para o nosso cliente instalar, testar e dar _feedback_
 
-Vimos também como usar o **PhoneGap Developer** para visualizarmos o app no nosso device de maneira bem rápida e depois como fazer o build do app e entregar para o nosso cliente instalar e dar feedback usando a estrutura do PhoneGap nas nuvens - o **PhoneGap Build**, para fazermos esse build sem precisarmos ter o ambiente configurado localmente.
-
-Vimos que precisamos enviar apenas a pasta _www_ e opcionalmente o _config.xml_ em um arquivo _zip_ ou usando um repositório do Git na web.
+Vimos que precisamos enviar apenas a pasta `www` e opcionalmente o arquivo `config.xml`, compactados em um arquivo `zip` ou usando um repositório do Git na web.
 
 ###PhoneGap
 http://phonegap.com/
@@ -28,11 +26,11 @@ http://build.phonegap.com/
 http://docs.phonegap.com/
 
 ###Rodar o Projeto
-Você ainda pode abrir diretamente o arquivo _www/index.html_ no navegador e o app vai rodar normalmente, porém pra poder visualizar o PhoneGap funcionando, instale o PhoneGap Desktop na sua máquina, adicione o pasta do projeto dentro dele e suba o servidor clicando no botão ">" que irá aparecer na lista de projetos adicionados. Isso vai te dar uma lista de IPs e portas da sua máquina que o app tá rodando, apenas digite um desses endereços no navegador (ex: http://192.177.2.2:8080).
+Você ainda pode abrir diretamente o arquivo `www/index.html` no navegador e o app vai rodar normalmente, porém pra poder visualizar o PhoneGap funcionando, use o **PhoneGap Desktop** e rode o projeto criado por lá, você pode adicionar qualquer projeto PhoneGap nele e subir o servidor clicando no botão ">" que irá aparecer na lista de projetos adicionados. Isso vai te dar uma lista de `IPs` e portas da sua máquina onde o app está rodando, apenas escolha um entre eles e digite-o no navegador (ex: `http://192.177.2.2:8080`).
 
-Instale o PhoneGap Developer no seu device (IOS, Android ou WP) e conectado na mesma rede Wi-fi digite o IP e porta que o app tá rodando e ele vai fazer o download e abrir o app no seu device.
+Instale o **PhoneGap Developer** no seu celular (IOS, Android ou WP) e, conectado na mesma rede `Wi-fi`, digite o mesmo `IP` e porta que o app tá rodando e ele vai fazer o _download_, o _buil_ e abrir o app no celular.
 
 ###Debug
 
-Com o app rodando no device, acesse o _inspect_ do Chrome digitando chrome://inspect/ e você vai poder fazer o **debug** do app que está rodando no seu celular.
+Com o app rodando no elular, acesse o `inspect` do Chrome digitando `chrome://inspect/` no navegador, escolha o device na lista apresentada e você vai poder fazer o **debug** do app visualizando diretamente no seu celular.
 
