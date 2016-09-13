@@ -41,6 +41,7 @@ $ javac -v
 $ java -version
 $ adb version
 
-###Rodar o essa Branch
+##Rodar essa Branch
 No console, na pasta raiz do projeto: $ phonegap serve
+Caso encontre algum erro use $ cordova serve
 
