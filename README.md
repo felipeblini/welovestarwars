@@ -41,6 +41,9 @@ http://genymotion.com/download
 - $ java -version
 - $ adb version
 
+###Buscar Plugins do Cordova
+https://www.npmjs.com/package/cordova-plugin-splashscreen
+
 ##Rodar essa Branch
 No console, na pasta raiz do projeto: $ phonegap serve
 
