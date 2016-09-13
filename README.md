@@ -11,7 +11,7 @@ Não é tão fácil assim né. Precisamos **criar e exportar** nossa **_splashsc
 
 Aprendemos que devemos colocar esses arquivos base, **icon.png para o ícone** e **splash.psd para a splashscreen**, em um diretório chamado **_resources_** criado na raiz do projeto e após isso executar o comando _resources_ do **CLI do Ionic**. Vimos que, para usar o serviço, precisamos do arquivo **ionic.config.json** para configurar o nosso projeto como um **Projeto Ionic** e aprendemos também que os arquivos devem ter as respectivas extensões (**png** e **psd**) e que precisamos ter as **plataforsmas instaladas** (Android, ios, WP, etc) e registradas no _config.xml_.
 
-Vimos também como configurar as preferências da splashscreen como tempo de exibição, fade e preloader no _config.xml_.
+Vimos também como configurar as preferências da splashscreen como tempo de exibição, fade e preloader no _config.xml_ e também como emular essas preferências no browser.
 
 ###Plugin Cordova Splashscreen
 https://www.npmjs.com/package/cordova-plugin-splashscreen
@@ -27,7 +27,20 @@ https://cordova.apache.org/docs/en/latest/reference/cordova-plugin-splashscreen/
 - ícone: http://code.ionicframework.com/resources/icon.psd
 
 ###Executar Comando
-No console, na pasta do projeto, com os arquivos adicionados na pasta _resources_, execute: _$ ionic resources_
+No console, na pasta do projeto, com os arquivos adicionados na pasta _resources_, execute: `_$ ionic resources_`
+
+###Emular Splashscreen no Browser
+- Adicione uma imagem _logo.png_ (padrão), ou qualquer outro nome de imagem dentro de uma pasta chamada _/img_ (padrão) ou qualuqye uma de sua preferência
+- A diferença nos nomes das pastas é que escolhendo o padrão _/img_/logo.png_ o cordova vai identificar essa como sendo a _splash_ na plataforma _browser_
+- No _config.xml_ adicione:
+<platform name="browser">
+      <preference name="SplashScreen" value="img/splash-browser.png" /> ou deixe "" caso use os nomes padrões
+      <preference name="SplashScreenDelay" value="3000" />
+      <preference name="SplashScreenBackgroundColor" value="black" />
+      <preference name="ShowSplashScreen" value="true" />
+      <preference name="SplashScreenWidth" value="320" />
+      <preference name="SplashScreenHeight" value="480" />
+  </platform>
 
 ##Rodar essa Branch
 Continuamos usanddo o servidor do PhoneGap.
