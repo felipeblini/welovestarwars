@@ -1,11 +1,11 @@
 # welovestarwars - branch 4 - Ionic Resources
 Curso Desenvolvimento de Aplicativos Híbridos com PhoneGap/Cordova, e Ionic
 
-Nessa branch vimos que é fácil adicionar um **ícone** legal na home screen e uma **_splashscreen_** maneira no nosso app. Percebemos que o Cordova adiciona um ícone padrão e que basta alterar esse ícone com o nosso design e deixar ele registrado no **_config.xml_**.
+Nessa branch vimos que é fácil adicionar um **ícone** legal na home screen e uma **_splashscreen_** maneira no nosso app. Percebemos que o Cordova adiciona um ícone padrão e que basta alterar esse ícone com o nosso design e deixar ele registrado no `config.xml`.
 
-Instalamos o plugin ```**cordova-plugin-splashscreen**``` e percebemos que ao rodar novamente nosso app, aparece uma _splashscren_ padrão do Cordova e que para customizar ela basta criar uma imagem do tamanho da tela, exportar e registrar uma referência para a imagem no ```_config.xml_```. Mas qual tamanho te tela?
+Instalamos o plugin `cordova-plugin-splashscreen` e percebemos que ao rodar novamente nosso app, aparece uma _splashscren_ padrão do Cordova e que para customizar ela basta criar uma imagem do tamanho da tela, exportar e registrar uma referência para a imagem no `config.xml`. Mas qual tamanho te tela?
 
-Não é tão fácil assim né. Precisamos **criar e exportar** nossa **_splashscreen_** e nosso **ícone** em diversas **dimensões e resoluções**, apenas para o Android são 6 ícones e 12 _splashscreens_. Para o iPhone são muito mais arquivos a exportar. E além disso precisamos **registrar** cada um dos arquivos no ```**_config.xml_**``` usando as tags ```**_\<icon\>_**``` e ```**_\<splash\>_**``` e especificar as dimensões exatas e resoluções de cada uma.
+Não é tão fácil assim né. Precisamos **criar e exportar** nossa **_splashscreen_** e nosso **ícone** em diversas **dimensões e resoluções**, apenas para o Android são 6 ícones e 12 _splashscreens_. Para o iPhone são muito mais arquivos a exportar. E além disso precisamos **registrar** cada um dos arquivos no `config.xml` usando as tags `\<icon\>` e `<splash\>` e especificar as dimensões exatas e resoluções de cada uma.
 
 É um baita trabalho! Por isso aprendemos a usar o **Ionic Resources**. Um **serviço do Ionic** que a partir de um **arquivo base** gera todas as imagens necessárias pra cada plataforma instalada no nosso projeto e ainda cria o registro de cada uma no _config.xml_. O que demoraríamos horas pra fazer, ele faz em segundos.
 
