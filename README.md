@@ -14,14 +14,14 @@ Aprendemos sobre o **Mundo Mobile** e a como **configurar o ambiente** de desenv
 Com o ambiente Java e Android configurados, adicionamos a **Plataforma Android** no nosso projeto Cordova e aprendemos a emular no Android Studio, no Genymotion e no Device. Vimos que o debug no Chrome:inspect continua podendo ser usado e vimos como usar o ADB (Android Debug Bridge). E no final como fazer o buil local pelo Cordova CLI
 
 ###Node e NPM
-Necessários para instalar o PhomeGap CLI e Cordova CLI
+Necessários para instalar o PhoneGap CLI e Cordova CLI
 
 http://nodejs.org/ (ao instalar o NPM estará disponível)
 
 ###Instalar o PhoneGap CLI e o Cordova CLI
-$ npm install -g phonegap
-$ npm install -g cordova
-ou $ npm install -g phonegap cordova (pra instalar os dois com um único comando)
+- $ npm install -g phonegap
+- $ npm install -g cordova
+- ou $ npm install -g phonegap cordova (pra instalar os dois com um único comando)
 
 Nessa altura nós usamos o PhoneGap apenas pra rodar o seu servidor que tem o _livereload_ configurado e nos ajuda muito em nossa produtividade. Pra todos os outros comando podemos esquecer o PhoneGap e usar o Cordova diretamente.
 
@@ -32,16 +32,17 @@ http://www.oracle.com/technetwork/java/javase/downloads/index.html
 http://genymotion.com/download
 
 ###Configurar Variáveis de Ambiente
-ANDROID_HOME = caminho\para\Android\sdk
-JAVA_HOME = caminho\para\Java\jdk
-Path: %JAVA_HOME%\bin %ANDROID_HOME%\tools %ANDROID_HOME%\platform-tools
+- ANDROID_HOME = caminho\para\Android\sdk
+- JAVA_HOME = caminho\para\Java\jdk
+- Path: %JAVA_HOME%\bin %ANDROID_HOME%\tools %ANDROID_HOME%\platform-tools
 
 ###Testar no Console
-$ javac -v
-$ java -version
-$ adb version
+- $ javac -v
+- $ java -version
+- $ adb version
 
 ##Rodar essa Branch
 No console, na pasta raiz do projeto: $ phonegap serve
+
 Caso encontre algum erro use $ cordova serve
 
