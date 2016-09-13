@@ -3,9 +3,9 @@ Curso Desenvolvimento de Aplicativos Híbridos com PhoneGap/Cordova, e Ionic
 
 Nessa branch nós instalamos o **PhoneGap CLI** e o **Cordova CLI** e entendemos qual a diferença dos dois e que o PhoneGap engloba o Cordova e usa seus comandos.
 
-Vimos a diferennça entre um projeto criado com PhoneGap e um projeto criado com Cordova, que basicamente é o _namespace_ utilizado no _config.xml_ e os arquivoa a mais que o PhoneGap cria.
+Vimos a diferennça entre um projeto criado com PhoneGap e um projeto criado com Cordova, que basicamente é o _namespace_ utilizado no _config.xml_ e os arquivos a mais que o PhoneGap cria.
 
-Integramos o projeto ao Cordova, ouvindo os eventos que este emite e adicionamos e usamos nosso primeiro plugin, o _whitelist_ que libera nosso app a fazer requisições para as URLs externas que nós autorizarmos no _config.xml_. Adicionamos também a plataforma Browser que simula o Cordova no navegador e aprendemos a registrar isso para que futuros programadores sigam o nosso workflow sem maiores problemas.
+**Integramos o projeto ao Cordova**, ouvindo os **eventos que este emite** e adicionamos e usamos nosso **primeiro plugin**, o **_whitelist_** que libera nosso app a fazer requisições para as URLs externas que nós autorizarmos no _config.xml_. Adicionamos também a **plataforma _Browser_** que simula o Cordova no navegador e aprendemos a registrar isso para que futuros programadores sigam o nosso _workflow_ sem maiores problemas. Vimos também o objetivo da pasta _hooks_
 
 Com o _whitelist_ configurado, integramos nosso código com a *Web API* do nosso cliente que expõe os dados do Banco de Dados dele e assim conseguimos acessar os dados que precisávamoa. Montamos um data factory com JavaScript e montamos a lista de todos os filmes, personagens, naves e planetas da franquia Star Wars sendo buscado via AJAX com ajudo do JQuery.
 
