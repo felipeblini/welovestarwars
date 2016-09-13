@@ -27,7 +27,7 @@ https://cordova.apache.org/docs/en/latest/reference/cordova-plugin-splashscreen/
 - `ícone`: http://code.ionicframework.com/resources/icon.psd
 
 ###Usar o Ionic Resources
-No console, na pasta do projeto, com os arquivos base adicionados na pasta `resources` com as devidas extensões, execute: `$ ionic resources`
+No console, na pasta raiz do projeto, com os arquivos base adicionados na pasta `resources` com as devidas extensões, execute: `$ ionic resources`
 
 O Ionic fará o upload dos arquivos base para os servidores remotos dele, redimensionar e nos devolver todas as imagens necessárias, além de criar um registro pra cada no `config.xml`. 
 
