@@ -16,8 +16,11 @@ Vimos também como configurar as preferências da splashscreen como tempo de exi
 ###Plugin Cordova Splashscreen
 https://www.npmjs.com/package/cordova-plugin-splashscreen
 
-###Documentação
+###Documentação do Ionic Resources
 http://ionicframework.com/docs/cli/icon-splashscreen.html
+
+###Documentação do Cordova Splasscreen
+https://cordova.apache.org/docs/en/latest/reference/cordova-plugin-splashscreen/
 
 ###Imagens Base
 - splash: http://code.ionicframework.com/resources/splash.psd
