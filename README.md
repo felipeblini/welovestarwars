@@ -26,8 +26,10 @@ https://cordova.apache.org/docs/en/latest/reference/cordova-plugin-splashscreen/
 - `splash`: http://code.ionicframework.com/resources/splash.psd
 - `ícone`: http://code.ionicframework.com/resources/icon.psd
 
-###Executar Comando
-No console, na pasta do projeto, com os arquivos adicionados na pasta `resources`, execute: `_$ ionic resources_`
+###Usar o Ionic Resources
+No console, na pasta do projeto, com os arquivos base adicionados na pasta `resources` com as devidas extensões, execute: `$ ionic resources`
+
+O Ionic fará o upload dos arquivos base para os servidores remotos dele, redimensionar e nos devolver todas as imagens necessárias, além de criar um registro pra cada no `config.xml`. 
 
 ###Emular Splashscreen no Browser
 - Adicione uma imagem `logo.png` (padrão), ou qualquer outro nome de imagem dentro de uma pasta `/img` (padrão) ou qualuquer outra de sua preferência
