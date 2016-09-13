@@ -3,9 +3,9 @@ Curso Desenvolvimento de Aplicativos Híbridos com PhoneGap/Cordova, e Ionic
 
 Nessa branch vimos que é fácil adicionar um **ícone** legal na home screen e uma **_splashscreen_** maneira no nosso app. Percebemos que o Cordova adiciona um ícone padrão e que basta alterar esse ícone com o nosso design e deixar ele registrado no **_config.xml_**.
 
-Instalamos o plugin **cordova-plugin-splashscreen** e percebemos que ao rodar novamente nosso app, aparece uma _splashscren_ padrão do Cordova e que para customizar ela basta criar uma imagem do tamanho da tela, exportar e registrar uma referência para a imagem no _config.xml_. Mas qual tamanho te tela?
+Instalamos o plugin ```**cordova-plugin-splashscreen**``` e percebemos que ao rodar novamente nosso app, aparece uma _splashscren_ padrão do Cordova e que para customizar ela basta criar uma imagem do tamanho da tela, exportar e registrar uma referência para a imagem no ```_config.xml_```. Mas qual tamanho te tela?
 
-Não é tão fácil assim né. Precisamos **criar e exportar** nossa **_splashscreen_** e nosso **ícone** em diversas **dimensões e resoluções**, apenas para o Android são 6 ícones e 12 _splashscreens_. Para o iPhone são muito mais arquivos a exportar. E além disso precisamos **registrar** cada um dos arquivos **no _config.xml_** usando as tags **_\<icon\>_** e **_\<splash\>_** e especificar as dimensões exatas e resoluções de cada uma.
+Não é tão fácil assim né. Precisamos **criar e exportar** nossa **_splashscreen_** e nosso **ícone** em diversas **dimensões e resoluções**, apenas para o Android são 6 ícones e 12 _splashscreens_. Para o iPhone são muito mais arquivos a exportar. E além disso precisamos **registrar** cada um dos arquivos no ```**_config.xml_**``` usando as tags ```**_\<icon\>_**``` e ```**_\<splash\>_**``` e especificar as dimensões exatas e resoluções de cada uma.
 
 É um baita trabalho! Por isso aprendemos a usar o **Ionic Resources**. Um **serviço do Ionic** que a partir de um **arquivo base** gera todas as imagens necessárias pra cada plataforma instalada no nosso projeto e ainda cria o registro de cada uma no _config.xml_. O que demoraríamos horas pra fazer, ele faz em segundos.
 
@@ -33,6 +33,7 @@ No console, na pasta do projeto, com os arquivos adicionados na pasta _resources
 - Adicione uma imagem _logo.png_ (padrão), ou qualquer outro nome de imagem dentro de uma pasta chamada _/img_ (padrão) ou qualuqye uma de sua preferência
 - A diferença nos nomes das pastas é que escolhendo o padrão _/img_/logo.png_ o cordova vai identificar essa como sendo a _splash_ na plataforma _browser_
 - No _config.xml_ adicione:
+```xml
 <platform name="browser">
       <preference name="SplashScreen" value="img/splash-browser.png" /> ou deixe "" caso use os nomes padrões
       <preference name="SplashScreenDelay" value="3000" />
@@ -41,9 +42,8 @@ No console, na pasta do projeto, com os arquivos adicionados na pasta _resources
       <preference name="SplashScreenWidth" value="320" />
       <preference name="SplashScreenHeight" value="480" />
   </platform>
+```
 
 ##Rodar essa Branch
-Continuamos usanddo o servidor do PhoneGap.
-
-Na raiz do projeto, execute: _$ phonegap serve_
+Continuamos usanddo o servidor do PhoneGap. Na raiz do projeto, execute: ```_$ phonegap serve_```
 
